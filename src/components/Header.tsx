@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const navLinks = [
-    { label: 'Latest News', href: '#news' },
+    { label: 'Breaking', href: '#breaking' },
+    { label: 'Deep Dives', href: '#articles' },
+    { label: 'CIO Profiles', href: '#leaders' },
     { label: 'Transformation', href: '#transformation' },
-    { label: 'Featured Leaders', href: '#leaders' },
     { label: 'Newsletter', href: '#newsletter' },
 ];
 

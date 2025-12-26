@@ -31,3 +31,35 @@ export interface TransformationSpotlight {
     company: string;
     image?: string;
 }
+
+// New types for enhanced content
+
+export type ArticleCategory = 'strategy' | 'technology' | 'trends' | 'insights';
+
+export interface Article {
+    id: string;
+    title: string;
+    subtitle: string;
+    category: ArticleCategory;
+    content: string[];
+    author: string;
+    date: string;
+    readTime: number;
+    insights: string[];
+    featured?: boolean;
+    image?: string;
+}
+
+export interface BreakingNews {
+    id: string;
+    headline: string;
+    source: string;
+    timestamp: string;
+    isBreaking: boolean;
+    summary?: string;
+}
+
+export interface DailyFeature {
+    articleId: string;
+    featureDate: string;
+}
