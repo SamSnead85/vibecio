@@ -1,4 +1,4 @@
-import { Leader, CoverStory, TransformationSpotlight, NewsItem } from '../types';
+import type { Leader, CoverStory, TransformationSpotlight, NewsItem } from '../types';
 
 export const coverStory: CoverStory = {
     headline: "The Death of Syntax",

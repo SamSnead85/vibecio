@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { X, Briefcase, Award } from 'lucide-react';
-import { Leader } from '../types';
+import type { Leader } from '../types';
 
 interface LeaderModalProps {
     leader: Leader | null;

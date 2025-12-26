@@ -9,7 +9,7 @@ import LeaderModal from './components/LeaderModal';
 import Newsletter from './components/Newsletter';
 import LoadingScreen from './components/LoadingScreen';
 import { coverStory, leaders, transformationSpotlight } from './data/content';
-import { Leader } from './types';
+import type { Leader } from './types';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);

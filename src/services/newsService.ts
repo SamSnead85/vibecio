@@ -1,5 +1,5 @@
 import { GoogleGenAI } from '@google/genai';
-import { NewsItem } from '../types';
+import type { NewsItem } from '../types';
 
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 

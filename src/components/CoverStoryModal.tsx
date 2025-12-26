@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { X } from 'lucide-react';
-import { CoverStory } from '../types';
+import type { CoverStory } from '../types';
 
 interface CoverStoryModalProps {
     story: CoverStory;

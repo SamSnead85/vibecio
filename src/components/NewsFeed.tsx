@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { TrendingUp, ExternalLink } from 'lucide-react';
-import { NewsItem } from '../types';
+import type { NewsItem } from '../types';
 import { fetchNews } from '../services/newsService';
 
 export default function NewsFeed() {

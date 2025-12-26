@@ -1,5 +1,5 @@
 import { Users, ArrowRight } from 'lucide-react';
-import { Leader } from '../types';
+import type { Leader } from '../types';
 
 interface CIOLeaderboardProps {
     leaders: Leader[];

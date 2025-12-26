@@ -1,5 +1,5 @@
 import { ShieldCheck, TrendingUp, ArrowRight } from 'lucide-react';
-import { TransformationSpotlight as TransformationType } from '../types';
+import type { TransformationSpotlight as TransformationType } from '../types';
 
 interface TransformationSpotlightProps {
     spotlight: TransformationType;
