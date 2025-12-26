@@ -1,0 +1,13 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://samsnead85.github.io/vibecio/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin and API routes (if any)
+Disallow: /api/
+Disallow: /_/
