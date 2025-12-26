@@ -109,10 +109,10 @@ export const leaders: Leader[] = [
     {
         id: "sam-sweilem",
         name: "Sam Sweilem",
-        title: "AI Transformation Leader",
-        company: "Enterprise AI Advisory",
-        bio: "Sam Sweilem is a recognized authority on enterprise AI transformation strategy. With over 15 years of experience leading digital and AI initiatives across Fortune 500 companies, Sam has developed a framework for ensuring AI transformation success before it starts. His 'Foundation First' methodology emphasizes that AI implementations fail not because of technology, but because organizations lack the foundational infrastructure, governance, and cultural buy-in required to support intelligent systems. Sam has guided dozens of enterprises through successful AI transformations, focusing on building the capabilities that enable AI to thrive—from data architecture to change management. He is a frequent speaker on AI readiness and serves as an advisor to multiple AI startups.",
-        expertise: ["AI Transformation Strategy", "Organizational Readiness", "AI Governance", "Change Management", "Foundation Architecture"]
+        title: "CIO",
+        company: "HealthPlan Services",
+        bio: "Sam Sweilem is the Chief Information Officer at HealthPlan Services, where he leads technology strategy and AI transformation initiatives for one of the nation's leading healthcare administration companies. With over 15 years of experience driving digital and AI initiatives across Fortune 500 companies, Sam has developed a reputation for pragmatic, foundation-first approaches to enterprise AI. His methodology emphasizes that successful AI implementations require robust infrastructure, clear governance, and cultural readiness before technology deployment. Under Sam's leadership, HealthPlan Services has achieved industry-leading automation rates while maintaining HIPAA compliance and data security standards. He is a frequent speaker on AI readiness at healthcare technology conferences and serves on advisory boards for multiple healthcare AI startups.",
+        expertise: ["Healthcare IT", "AI Transformation", "HIPAA Compliance", "Enterprise Architecture", "Change Management"]
     },
     {
         id: "clark-kent-henderson",
@@ -213,7 +213,7 @@ export const articles: Article[] = [
         title: "Why AI Transformations Fail Before They Start",
         subtitle: "Building the Foundations That Enable AI Success",
         category: "strategy",
-        author: "Sam Sweilem",
+        author: "Sam Sweilem, CIO at HealthPlan Services",
         date: "2025-12-26",
         readTime: 10,
         featured: true,
@@ -473,6 +473,102 @@ export const articles: Article[] = [
             "These skills exist in your current workforce. Your best business analysts already think in systems. Your best project managers already define outcomes precisely. Your best QA engineers already know how to validate complex outputs. The opportunity isn't hiring new AI talent—it's unlocking AI capability in talent you already have.",
             "The most successful AI upskilling programs focus on practical application, not theory. They give people real AI tools, real problems, and permission to experiment. They measure success by outcomes delivered, not certifications earned.",
             "Beyond specific skills, the meta-skill that matters most is learning agility. AI capabilities are evolving faster than any curriculum can track. The engineers who will thrive are those who can continuously adapt—who see AI evolution as an endless source of new capability rather than a threat to existing expertise."
+        ]
+    },
+    {
+        id: "healthcare-ai-compliance",
+        title: "AI in Healthcare: The Compliance Imperative",
+        subtitle: "Balancing Innovation with HIPAA and Regulatory Requirements",
+        category: "healthcare",
+        author: "Healthcare Technology Desk",
+        date: "2025-12-15",
+        readTime: 8,
+        featured: false,
+        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=500&fit=crop",
+        insights: [
+            "HIPAA compliance is not a barrier to AI—it's a framework for trustworthy implementation",
+            "The most successful healthcare AI deployments treat compliance as a design constraint, not an afterthought",
+            "Privacy-preserving AI techniques are enabling new use cases previously considered impossible"
+        ],
+        content: [
+            "Healthcare has always been a challenging domain for technology innovation. The stakes are higher—patient safety, privacy, and regulatory compliance create constraints that don't exist in other industries. AI in healthcare must navigate these constraints while still delivering value.",
+            "The organizations succeeding with healthcare AI share a common approach: they treat compliance as a design constraint, not a checklist to complete after development. This 'compliance by design' methodology ensures that AI systems are built from the ground up to satisfy regulatory requirements.",
+            "HIPAA, in particular, is often misunderstood as a barrier to AI. In reality, HIPAA provides a clear framework for handling protected health information (PHI) that, when followed, enables AI innovation rather than blocking it. The key is understanding what HIPAA actually requires—and what it doesn't.",
+            "Privacy-preserving AI techniques are opening new possibilities. Federated learning allows models to be trained across multiple healthcare organizations without sharing patient data. Differential privacy ensures that individual patients cannot be identified from model outputs. Secure enclaves enable AI processing of sensitive data with mathematical guarantees of confidentiality.",
+            "For CIOs in healthcare, the strategic imperative is clear: build AI capabilities within a robust compliance framework. The organizations that figure out how to innovate safely will gain significant competitive advantage. Those that either avoid AI entirely or cut corners on compliance will fall behind—or face regulatory consequences.",
+            "The future of healthcare AI is not about choosing between innovation and compliance. It's about designing systems that achieve both simultaneously."
+        ]
+    },
+    {
+        id: "cio-board-communication",
+        title: "Speaking to the Board About AI",
+        subtitle: "How CIOs Are Translating Technology Strategy for Executive Leadership",
+        category: "leadership",
+        author: "Executive Communications",
+        date: "2025-12-10",
+        readTime: 7,
+        featured: false,
+        image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=500&fit=crop",
+        insights: [
+            "Boards want to understand AI risk and opportunity, not technical architecture",
+            "The most effective CIO presentations focus on business outcomes, not technology capabilities",
+            "Building AI literacy among board members is a strategic investment that pays dividends"
+        ],
+        content: [
+            "The relationship between CIOs and boards has fundamentally changed. Where boards once asked 'how much does IT cost?' they now ask 'what can AI do for us?' This shift creates both opportunity and challenge for technology leaders.",
+            "Board members, by and large, are not technologists. They're experienced business leaders who understand strategy, risk, and opportunity. When CIOs speak in technology terms—transformer architectures, fine-tuning approaches, inference optimization—they lose their audience.",
+            "The most effective CIO communications translate AI into business language. Instead of 'we deployed an LLM for customer service,' say 'we reduced customer wait times by 60% while improving satisfaction scores.' Instead of 'we implemented agentic workflows,' say 'we automated $50M in annual processing costs with 99.5% accuracy.'",
+            "Risk communication is equally important. Boards need to understand AI risk in terms they're familiar with: regulatory risk, reputational risk, operational risk. 'AI hallucinations' is a technology term. 'The system could provide incorrect information to customers' is a business risk that boards can evaluate.",
+            "Smart CIOs are also investing in board AI literacy. Short, focused educational sessions help board members ask better questions and make better decisions. When board members understand AI at a conceptual level, CIOs can have more productive strategic discussions.",
+            "The CIOs who master board communication are gaining unprecedented influence in their organizations. Technology strategy is becoming business strategy—and the executives who can bridge both worlds are defining the future of their enterprises."
+        ]
+    },
+    {
+        id: "ai-implementation-patterns",
+        title: "The Build, Buy, or Partner Decision",
+        subtitle: "How Leading CIOs Are Approaching AI Implementation",
+        category: "strategy",
+        author: "Implementation Analysis",
+        date: "2025-12-05",
+        readTime: 6,
+        featured: false,
+        image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=500&fit=crop",
+        insights: [
+            "Most enterprises are pursuing hybrid approaches—building where AI is core differentiator, buying where it's commodity",
+            "The 'build' decision increasingly means fine-tuning rather than training from scratch",
+            "Partnership models are emerging as a third path—deeper than purchasing, lighter than building"
+        ],
+        content: [
+            "Every CIO facing AI implementation confronts a fundamental question: should we build our own AI capabilities, buy them from vendors, or find something in between? The answer depends on strategic context—but patterns are emerging.",
+            "The 'build vs. buy' framing itself is becoming outdated. With foundation models as a starting point, 'build' increasingly means 'fine-tune and customize' rather than 'train from scratch.' The question is better framed as 'how much customization do we need, and where?'",
+            "Leading enterprises are adopting hybrid approaches. They buy commodity AI—transcription, translation, basic document processing—where the capability is well-established and undifferentiated. They build (via fine-tuning and custom development) where AI directly impacts competitive advantage.",
+            "Partnership models are emerging as a middle path. Rather than purchasing off-the-shelf solutions, enterprises are co-developing with AI vendors—gaining customization without the full burden of building. These partnerships require careful structuring to protect intellectual property and ensure long-term flexibility.",
+            "The decision also depends on capability. Building AI requires skills that many enterprises don't have—and the competition for AI talent is fierce. For organizations without deep AI expertise, vendor solutions may be the faster path to value.",
+            "The most successful CIOs are making these decisions explicitly, case by case, rather than adopting blanket policies. Each AI use case gets evaluated on its strategic importance, customization requirements, and organizational capability to execute."
+        ]
+    },
+    {
+        id: "legacy-modernization-ai",
+        title: "Legacy Systems Meet AI",
+        subtitle: "Strategies for AI-Enabling Decades-Old Infrastructure",
+        category: "technology",
+        author: "Enterprise Architecture",
+        date: "2025-11-28",
+        readTime: 8,
+        featured: false,
+        image: "https://images.unsplash.com/photo-1484557052118-f32bd25b45b5?w=800&h=500&fit=crop",
+        insights: [
+            "Legacy systems don't have to be replaced to benefit from AI—they can be augmented",
+            "API layers and data extraction pipelines are the bridge between legacy and AI",
+            "The 'strangler pattern' for legacy modernization applies to AI enablement"
+        ],
+        content: [
+            "Every enterprise has them: legacy systems running critical business processes, often on decades-old technology stacks. The conventional wisdom says these systems must be replaced before AI can be implemented. That conventional wisdom is wrong.",
+            "Organizations are finding creative ways to layer AI capabilities over legacy infrastructure without the risk and cost of wholesale replacement. The key is creating integration points that allow AI systems to interact with legacy data and processes.",
+            "API wrappers around legacy systems enable AI agents to query and update information. Data extraction pipelines can flow legacy data into AI-accessible formats without disrupting operational systems. Screen-scraping techniques, while inelegant, can automate processes that would otherwise require manual intervention.",
+            "The 'strangler pattern'—gradually replacing legacy functionality with modern components—applies to AI enablement. Rather than attempting a big-bang AI transformation, organizations can implement AI capabilities feature by feature, slowly reducing dependence on legacy systems over time.",
+            "This approach also manages risk. Legacy systems continue operating while AI capabilities are tested and validated. If AI implementations don't work as expected, fallback to legacy processes is straightforward. Over time, successful AI capabilities can inform decisions about which legacy functions to modernize.",
+            "For CIOs with significant legacy portfolios, the message is clear: don't let legacy be an excuse for AI inaction. Modern integration techniques make it possible to deliver AI value while managing the complexity of enterprise technology environments."
         ]
     }
 ];

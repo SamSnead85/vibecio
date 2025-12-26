@@ -34,7 +34,7 @@ export interface TransformationSpotlight {
 
 // New types for enhanced content
 
-export type ArticleCategory = 'strategy' | 'technology' | 'trends' | 'insights';
+export type ArticleCategory = 'strategy' | 'technology' | 'trends' | 'insights' | 'healthcare' | 'leadership';
 
 export interface Article {
     id: string;
