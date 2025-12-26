@@ -1,0 +1,56 @@
+{
+    "name": "VibeCIO",
+    "short_name": "VibeCIO",
+    "description": "Thought Leadership for the Age of AI",
+    "start_url": "/vibecio/",
+    "display": "standalone",
+    "background_color": "#0a0c10",
+    "theme_color": "#c9a55c",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/vibecio/icons/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/vibecio/icons/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": [
+        "news",
+        "business",
+        "technology"
+    ],
+    "screenshots": [],
+    "shortcuts": [
+        {
+            "name": "Articles",
+            "short_name": "Articles",
+            "description": "View all articles",
+            "url": "/vibecio/articles",
+            "icons": [
+                {
+                    "src": "/vibecio/icons/articles.png",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "Leaders",
+            "short_name": "Leaders",
+            "description": "View CIO profiles",
+            "url": "/vibecio/leaders",
+            "icons": [
+                {
+                    "src": "/vibecio/icons/leaders.png",
+                    "sizes": "96x96"
+                }
+            ]
+        }
+    ]
+}

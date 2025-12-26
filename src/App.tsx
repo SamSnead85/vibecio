@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { ThemeProvider, BookmarkProvider, ReadingHistoryProvider } from './hooks/usePreferences';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ReadingProgress from './components/ReadingProgress';
 import SearchModal from './components/SearchModal';
+import Toast from './components/Toast';
 import LoadingScreen from './components/LoadingScreen';
 import Home from './pages/Home';
 import ArticlesPage from './pages/ArticlesPage';
@@ -12,6 +14,8 @@ import LeadersPage from './pages/LeadersPage';
 import LeaderPage from './pages/LeaderPage';
 import AboutPage from './pages/AboutPage';
 import NewsArchive from './pages/NewsArchive';
+import BookmarksPage from './pages/BookmarksPage';
+import SettingsPage from './pages/SettingsPage';
 import NotFound from './pages/NotFound';
 
 // Scroll restoration component
@@ -68,6 +72,8 @@ function AppContent() {
             <Route path="/leader/:id" element={<LeaderPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/news" element={<NewsArchive />} />
+            <Route path="/bookmarks" element={<BookmarksPage />} />
+            <Route path="/settings" element={<SettingsPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
@@ -77,6 +83,9 @@ function AppContent() {
 
       {/* Search Modal */}
       <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+
+      {/* Toast Notifications */}
+      <Toast />
     </>
   );
 }
@@ -84,7 +93,13 @@ function AppContent() {
 function App() {
   return (
     <Router>
-      <AppContent />
+      <ThemeProvider>
+        <BookmarkProvider>
+          <ReadingHistoryProvider>
+            <AppContent />
+          </ReadingHistoryProvider>
+        </BookmarkProvider>
+      </ThemeProvider>
     </Router>
   );
 }
