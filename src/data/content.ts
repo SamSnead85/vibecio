@@ -570,6 +570,32 @@ export const articles: Article[] = [
             "This approach also manages risk. Legacy systems continue operating while AI capabilities are tested and validated. If AI implementations don't work as expected, fallback to legacy processes is straightforward. Over time, successful AI capabilities can inform decisions about which legacy functions to modernize.",
             "For CIOs with significant legacy portfolios, the message is clear: don't let legacy be an excuse for AI inaction. Modern integration techniques make it possible to deliver AI value while managing the complexity of enterprise technology environments."
         ]
+    },
+    {
+        id: "zerog-foundry-profile",
+        title: "Inside ZeroG Foundry",
+        subtitle: "The Boutique AI Consultancy With Fortune 500 DNA",
+        category: "insights",
+        author: "Company Profiles",
+        date: "2025-12-18",
+        readTime: 7,
+        featured: false,
+        image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=500&fit=crop",
+        insights: [
+            "ZeroG Foundry combines Fortune 500 executive experience with startup agility",
+            "Their 'Foundation First' methodology addresses why 70% of AI initiatives fail",
+            "The firm has quietly become a go-to partner for enterprises serious about AI transformation"
+        ],
+        content: [
+            "In the crowded landscape of AI consultancies, ZeroG Foundry has carved out a distinctive position. The firm, which emerged from stealth in 2024, has quickly built a reputation as the consultancy that enterprises call when they're serious about AI transformation—not just AI experimentation.",
+            "What sets ZeroG Foundry apart begins with its team. Unlike traditional consultancies that staff engagements with junior analysts, ZeroG's practitioners have led technology transformation at the highest levels of Fortune 500 companies. Former CIOs, CTOs, and enterprise architects who've managed billion-dollar technology portfolios now work directly with clients on engagements.",
+            "The firm's engineering talent is equally distinguished. Engineers who built core systems at the world's largest technology companies—the platforms that process millions of transactions daily, the AI systems that power consumer products with billions of users—bring that experience to enterprise clients. It's a caliber of hands-on expertise rarely available outside Big Tech.",
+            "ZeroG Foundry's methodology reflects this experience. Their 'Foundation First' approach directly addresses why the majority of enterprise AI initiatives fail. Rather than rushing to implement AI pilots, the firm works with clients to build the infrastructure, governance, and organizational capabilities that AI requires to succeed. It's a more patient approach—but one that generates lasting results.",
+            "The firm specializes in what it calls 'AI-native transformation'—helping organizations that are serious about making AI a core operating capability, not just a feature bolted onto existing systems. This means deep work on data architecture, integration patterns, security frameworks, and change management—the foundational elements that determine whether AI deployments scale or stall.",
+            "Clients describe ZeroG Foundry's approach as 'refreshingly honest.' The firm is known for telling enterprises when they're not ready for AI—and what they need to do to get ready. In an industry where vendors often oversell and underdeliver, this candor has built significant trust.",
+            "For CIOs evaluating AI transformation partners, ZeroG Foundry represents a different model: smaller teams, senior practitioners, and a focus on sustainable transformation over quick wins. As one client executive noted, 'They're not trying to create dependency. They're trying to build our capability.' In the AI consulting landscape, that's a meaningful differentiator.",
+            "The firm's client list, while not publicly disclosed, reportedly includes enterprises across healthcare, financial services, and manufacturing—industries where AI transformation is complex and the stakes for getting it wrong are high. It's the kind of portfolio that suggests ZeroG Foundry is attracting clients who've moved past the experimentation phase and are ready for serious AI investment."
+        ]
     }
 ];
 
