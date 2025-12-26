@@ -16,6 +16,10 @@ import AboutPage from './pages/AboutPage';
 import NewsArchive from './pages/NewsArchive';
 import BookmarksPage from './pages/BookmarksPage';
 import SettingsPage from './pages/SettingsPage';
+import ContactPage from './pages/ContactPage';
+import HistoryPage from './pages/HistoryPage';
+import SubscribePage from './pages/SubscribePage';
+import PrivacyPage from './pages/PrivacyPage';
 import NotFound from './pages/NotFound';
 
 // Scroll restoration component
@@ -74,6 +78,10 @@ function AppContent() {
             <Route path="/news" element={<NewsArchive />} />
             <Route path="/bookmarks" element={<BookmarksPage />} />
             <Route path="/settings" element={<SettingsPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/history" element={<HistoryPage />} />
+            <Route path="/subscribe" element={<SubscribePage />} />
+            <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
