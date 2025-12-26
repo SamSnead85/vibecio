@@ -105,6 +105,46 @@ export const leaders: Leader[] = [
         company: "RetailMax",
         bio: "Maria Santos has transformed customer experience at RetailMax through AI-powered personalization at unprecedented scale. Her AI systems process 500 million customer interactions daily, delivering real-time personalization that has increased conversion by 340%. Maria pioneered the use of agentic AI for customer service, with AI agents now handling 78% of customer inquiries autonomously. She is a board member of the Retail AI Consortium.",
         expertise: ["Customer Experience AI", "Personalization at Scale", "Retail Technology", "Agentic Customer Service"]
+    },
+    {
+        id: "sam-sweilem",
+        name: "Sam Sweilem",
+        title: "AI Transformation Leader",
+        company: "Enterprise AI Advisory",
+        bio: "Sam Sweilem is a recognized authority on enterprise AI transformation strategy. With over 15 years of experience leading digital and AI initiatives across Fortune 500 companies, Sam has developed a framework for ensuring AI transformation success before it starts. His 'Foundation First' methodology emphasizes that AI implementations fail not because of technology, but because organizations lack the foundational infrastructure, governance, and cultural buy-in required to support intelligent systems. Sam has guided dozens of enterprises through successful AI transformations, focusing on building the capabilities that enable AI to thrive—from data architecture to change management. He is a frequent speaker on AI readiness and serves as an advisor to multiple AI startups.",
+        expertise: ["AI Transformation Strategy", "Organizational Readiness", "AI Governance", "Change Management", "Foundation Architecture"]
+    },
+    {
+        id: "clark-kent-henderson",
+        name: "Clark Henderson",
+        title: "CIO",
+        company: "Meridian Insurance Group",
+        bio: "Clark Henderson is modernizing the insurance industry through intelligent automation and AI-driven risk assessment. At Meridian, he has implemented AI systems that process claims 85% faster while reducing fraud by $420M annually. Clark's approach emphasizes building robust data foundations before layering AI capabilities, a strategy that has become a case study in successful enterprise AI deployment.",
+        expertise: ["Insurance Technology", "Risk AI", "Claims Automation", "Fraud Detection"]
+    },
+    {
+        id: "priya-sharma",
+        name: "Dr. Priya Sharma",
+        title: "Chief AI Officer",
+        company: "TechForward Capital",
+        bio: "Dr. Priya Sharma leads AI strategy for one of the largest technology-focused investment firms. Her unique perspective spanning investment, research, and implementation has made her a sought-after voice on AI maturity and readiness. Priya developed the widely-cited 'AI Readiness Index' that helps organizations assess their preparedness for AI adoption. She holds a PhD in Machine Learning from Carnegie Mellon.",
+        expertise: ["AI Investment Strategy", "AI Readiness Assessment", "Venture Technology", "Machine Learning Research"]
+    },
+    {
+        id: "michael-oconnor",
+        name: "Michael O'Connor",
+        title: "CTO",
+        company: "United Manufacturing",
+        bio: "Michael O'Connor is leading the Industry 4.0 transformation at United Manufacturing, one of America's largest industrial conglomerates. His pragmatic approach to AI—focusing on workforce enablement rather than replacement—has achieved remarkable results: 40% productivity gains with 98% worker retention. Michael advocates for 'AI with the grain,' building AI systems that enhance existing processes rather than forcing organizational redesign.",
+        expertise: ["Industrial AI", "Manufacturing 4.0", "Workforce AI Enablement", "Pragmatic AI Implementation"]
+    },
+    {
+        id: "jennifer-wu",
+        name: "Jennifer Wu",
+        title: "CDO",
+        company: "Pacific Bank Holdings",
+        bio: "Jennifer Wu oversees the data and AI strategy for Pacific Bank's $890B in assets under management. Her focus on AI governance and explainability has made Pacific Bank a model for responsible AI in financial services. Jennifer's team has implemented over 200 AI models in production, each with full audit trails and explainability reports required by regulators.",
+        expertise: ["Financial AI", "AI Governance", "Regulatory Compliance", "Explainable AI"]
     }
 ];
 
@@ -169,6 +209,34 @@ export const breakingNews: BreakingNews[] = [
 
 export const articles: Article[] = [
     {
+        id: "ai-transformation-foundations",
+        title: "Why AI Transformations Fail Before They Start",
+        subtitle: "Building the Foundations That Enable AI Success",
+        category: "strategy",
+        author: "Sam Sweilem",
+        date: "2025-12-26",
+        readTime: 10,
+        featured: true,
+        image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=500&fit=crop",
+        insights: [
+            "70% of AI initiatives fail—not because of technology, but because of missing foundational capabilities",
+            "Successful AI transformation requires infrastructure, governance, and cultural readiness before implementation",
+            "Organizations that invest in foundations first see 3x higher success rates in AI deployment"
+        ],
+        content: [
+            "The statistics are sobering: industry research consistently shows that 70-85% of AI initiatives fail to deliver their expected value. But here's what the failure postmortems rarely reveal—most of these initiatives were doomed before they started. Not because the technology was wrong, but because the organization wasn't ready.",
+            "After guiding dozens of enterprises through AI transformations, I've observed a consistent pattern. Organizations rush to implement AI—excited by demos, pressured by competitors, urged on by vendors—without first building the foundational capabilities that AI requires to succeed. They're trying to build a skyscraper on sand.",
+            "The Foundation First Framework identifies three critical pillars that must be in place before AI can deliver sustainable value: Infrastructure Readiness, Governance Architecture, and Cultural Alignment. Miss any one of these, and your AI initiative will struggle no matter how sophisticated your models.",
+            "Infrastructure Readiness goes beyond having cloud computing capacity. It means having clean, accessible, well-documented data. It means having APIs and integration points that allow AI systems to connect with existing processes. It means having monitoring and observability capabilities that let you understand what your AI is doing. Organizations often discover these gaps mid-implementation—when fixing them becomes expensive and disruptive.",
+            "Governance Architecture addresses the 'who decides what' questions that AI inevitably raises. Who approves an AI system for production use? Who is accountable when an AI makes a wrong decision? How do you ensure AI systems remain compliant as regulations evolve? Without clear answers, organizations either move too slowly—paralyzed by uncertainty—or too quickly, creating risks that surface later as crises.",
+            "Cultural Alignment is perhaps the most overlooked pillar. AI transforms how people work, and people resist changes they don't understand or trust. I've seen technically excellent AI implementations fail because frontline workers actively undermined them. The warehouse workers who 'forgot' to scan items correctly. The customer service reps who ignored AI recommendations. The managers who found reasons to revert to manual processes.",
+            "The organizations that succeed with AI invest upfront in change management. They involve stakeholders early. They communicate not just what AI will do, but why it matters and how it will help. They train extensively, creating AI literacy across the organization. They celebrate early wins and learn publicly from early failures.",
+            "There's also a critical pre-implementation question that most organizations skip: Is AI even the right solution? Sometimes the problem is process inefficiency that's better solved with traditional automation. Sometimes it's a data quality issue that AI will only amplify. Sometimes the expected ROI doesn't justify the implementation complexity. A honest assessment often reveals that 30% of proposed AI use cases aren't actually good candidates for AI.",
+            "For CIOs and transformation leaders, the message is clear: resist the pressure to 'do AI now.' Instead, invest in building foundations that will enable AI to succeed—not just in one pilot project, but across your organization for years to come. The 6-12 months you spend on foundational work will pay dividends in faster, more successful implementations when you do deploy AI.",
+            "The organizations that are truly winning with AI aren't the ones that started first. They're the ones that started right."
+        ]
+    },
+    {
         id: "inference-wars",
         title: "The Inference Wars",
         subtitle: "Why NVIDIA Paid $20 Billion for Groq's Technology",
@@ -176,7 +244,7 @@ export const articles: Article[] = [
         author: "VibeCIO Analysis",
         date: "2025-12-26",
         readTime: 8,
-        featured: true,
+        featured: false,
         image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=500&fit=crop",
         insights: [
             "Inference is the new battleground—training models is solved, running them efficiently is not",
