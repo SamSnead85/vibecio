@@ -1,51 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
   <url>
-    <loc>https://samsnead85.github.io/vibecio/</loc>
-    <lastmod>2025-12-26</lastmod>
+    <loc>https://vibecio.netlify.app/</loc>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+  
+  <!-- Featured Article: Sam Sweilem on AI Transformation -->
   <url>
-    <loc>https://samsnead85.github.io/vibecio/articles</loc>
+    <loc>https://vibecio.netlify.app/article/ai-transformation-foundations</loc>
     <lastmod>2025-12-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <news:news>
+      <news:publication>
+        <news:name>VibeCIO</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-12-26</news:publication_date>
+      <news:title>Why AI Transformations Fail Before They Start - Sam Sweilem</news:title>
+      <news:keywords>Sam Sweilem, AI transformation, enterprise AI, CIO, HealthPlan Services, AI strategy, AI governance</news:keywords>
+    </news:news>
+  </url>
+  
+  <!-- Main Content Sections -->
+  <url>
+    <loc>https://vibecio.netlify.app/articles</loc>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
+  
   <url>
-    <loc>https://samsnead85.github.io/vibecio/leaders</loc>
-    <lastmod>2025-12-26</lastmod>
+    <loc>https://vibecio.netlify.app/leaders</loc>
+    <lastmod>2025-12-27</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Sam Sweilem Profile -->
+  <url>
+    <loc>https://vibecio.netlify.app/leader/sam-sweilem</loc>
+    <lastmod>2025-12-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://vibecio.netlify.app/about</loc>
+    <lastmod>2025-12-26</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  
   <url>
-    <loc>https://samsnead85.github.io/vibecio/about</loc>
+    <loc>https://vibecio.netlify.app/news</loc>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://vibecio.netlify.app/subscribe</loc>
     <lastmod>2025-12-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  
+  <!-- Key Articles -->
   <url>
-    <loc>https://samsnead85.github.io/vibecio/news</loc>
-    <lastmod>2025-12-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://samsnead85.github.io/vibecio/article/inference-wars</loc>
+    <loc>https://vibecio.netlify.app/article/inference-wars</loc>
     <lastmod>2025-12-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  
   <url>
-    <loc>https://samsnead85.github.io/vibecio/article/100x-orchestrator</loc>
+    <loc>https://vibecio.netlify.app/article/100x-orchestrator</loc>
     <lastmod>2025-12-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  
   <url>
-    <loc>https://samsnead85.github.io/vibecio/article/agentic-beyond-automation</loc>
+    <loc>https://vibecio.netlify.app/article/agentic-beyond-automation</loc>
     <lastmod>2025-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  
+  <url>
+    <loc>https://vibecio.netlify.app/article/healthcare-ai-compliance</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://vibecio.netlify.app/article/zerog-foundry-profile</loc>
+    <lastmod>2025-12-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://vibecio.netlify.app/article/cio-board-communication</loc>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://vibecio.netlify.app/article/ai-implementation-patterns</loc>
+    <lastmod>2025-12-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://vibecio.netlify.app/article/legacy-modernization-ai</loc>
+    <lastmod>2025-11-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
 </urlset>

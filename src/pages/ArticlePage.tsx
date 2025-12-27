@@ -1,10 +1,59 @@
 import { useParams, Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import { articles } from '../data/content';
 import { ArrowLeft, Clock, User, Calendar, Share2, Bookmark, ChevronRight } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function ArticlePage() {
     const { id } = useParams<{ id: string }>();
     const article = articles.find(a => a.id === id);
+
+    // Add structured data for article
+    useEffect(() => {
+        if (!article) return;
+
+        const structuredData = {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": article.title,
+            "alternativeHeadline": article.subtitle,
+            "description": article.subtitle,
+            "author": {
+                "@type": "Person",
+                "name": article.author.split(',')[0].trim()
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "VibeCIO",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://vibecio.netlify.app/og-image.png"
+                }
+            },
+            "datePublished": article.date,
+            "dateModified": article.date,
+            "mainEntityOfPage": `https://vibecio.netlify.app/article/${article.id}`,
+            "image": article.image,
+            "articleSection": article.category,
+            "keywords": article.insights.join(", ")
+        };
+
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.id = 'article-structured-data';
+        script.text = JSON.stringify(structuredData);
+
+        // Remove existing
+        const existing = document.getElementById('article-structured-data');
+        if (existing) existing.remove();
+
+        document.head.appendChild(script);
+
+        return () => {
+            const el = document.getElementById('article-structured-data');
+            if (el) el.remove();
+        };
+    }, [article]);
 
     if (!article) {
         return (
@@ -28,10 +77,24 @@ export default function ArticlePage() {
         technology: 'from-emerald-500 to-teal-600',
         trends: 'from-violet-500 to-purple-600',
         insights: 'from-amber-500 to-orange-600',
+        healthcare: 'from-rose-500 to-pink-600',
+        leadership: 'from-cyan-500 to-blue-600',
     };
 
     return (
         <article className="min-h-screen">
+            <SEO
+                title={`${article.title} | VibeCIO`}
+                description={article.subtitle}
+                author={article.author}
+                type="article"
+                image={article.image}
+                url={`https://vibecio.netlify.app/article/${article.id}`}
+                publishedTime={article.date}
+                articleSection={article.category}
+                keywords={[article.author.split(',')[0].trim(), article.category, ...article.insights.slice(0, 3).map(i => i.split('—')[0].trim())]}
+            />
+
             {/* Hero Section */}
             <header className="relative py-24 overflow-hidden">
                 <div className={`absolute inset-0 bg-gradient-to-br ${categoryColors[article.category]} opacity-10`} />
