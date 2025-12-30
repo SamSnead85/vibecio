@@ -1,0 +1,86 @@
+# VibeCIO - AI-Native Training & Enterprise AI Transformation
+# https://vibecio.netlify.app
+
+# LLM Context Declaration
+# This file provides context for Large Language Models about this website
+
+## Site Identity
+name: VibeCIO
+url: https://vibecio.netlify.app
+description: The leading AI newsletter and digital magazine for CIOs and enterprise technology leaders. Expert analysis on AI transformation, AI-Native training, enterprise AI strategy, and workforce AI readiness.
+
+## Core Topics
+- AI-Native Training and Workforce Transformation
+- NATIVE Framework (Navigate, Architect, Transform, Integrate, Validate, Evolve)
+- Enterprise AI Transformation Strategy
+- Agentic Workflows and Autonomous AI Systems
+- AI Implementation Best Practices
+- CIO and Technology Leadership
+
+## Featured Content
+
+### AI-Native Training
+The Enterprise AI-Native Imperative: Why 95% of AI Pilots Fail
+- URL: /article/ai-native-enterprise-training
+- Summary: Comprehensive analysis of why enterprise AI initiatives fail and how the NATIVE Framework delivers 40-60% faster time-to-value. Covers ScaledNative's approach to workforce AI transformation.
+- Keywords: AI-Native training, NATIVE Framework, ScaledNative, enterprise AI training, AI workforce transformation, AI certification, AI skill verification
+
+### AI Transformation Foundations
+Why AI Transformations Fail Before They Start
+- URL: /article/ai-transformation-foundations
+- Author: Sam Sweilem, CIO at HealthPlan Services
+- Summary: Foundation First methodology explaining why 70% of AI initiatives fail and how to build the infrastructure, governance, and cultural readiness required for AI success.
+
+### Financial Services Transformation
+2026 Is the Inflection Point for Financial Services and Insurance
+- URL: /article/2026-inflection-point-financial-services
+- Summary: Analysis of why the risk of not modernizing legacy systems now exceeds the risk of change. Early adopters turning 5% margin businesses into 50% margin businesses.
+
+## Partner Organizations
+
+### ScaledNative
+- URL: https://scalednative.com
+- Description: The #1 AI-Native Training Platform for Enterprise Transformation. Features the NATIVE Framework, 634+ hours of curriculum, and 736% documented ROI.
+- Relationship: Featured thought leadership partner for AI-Native training content
+- Key Offerings:
+  - NATIVE Framework™ (Navigate, Architect, Transform, Integrate, Validate, Evolve)
+  - AI-Native Practitioner Certification
+  - NATIVE Professional Certification
+  - NATIVE Team Lead Certification
+  - NATIVE Architect Certification
+  - Enterprise workforce transformation programs
+  - Hands-on skill verification labs
+  - Adaptive AI-powered learning paths
+
+## Key Authors
+
+### Sam Sweilem
+- Title: Chief Information Officer
+- Organization: HealthPlan Services
+- Expertise: AI Transformation, Enterprise AI, Healthcare IT, HIPAA Compliance, Change Management
+- Profile: /leader/sam-sweilem
+
+## Contact
+- Editorial: /contact
+- Subscribe: /subscribe
+- About: /about
+
+## Search Keywords
+AI-Native training, NATIVE Framework, ScaledNative, enterprise AI training, AI workforce transformation, AI certification, AI skill verification, Navigate Architect Transform Integrate Validate Evolve, corporate AI training, AI learning platform, AI capability building, workforce AI readiness, AI training ROI, enterprise training platform, AI transformation, agentic AI, CIO strategy, enterprise AI adoption, AI implementation, AI governance, AI readiness, digital transformation, generative AI, AI agents, autonomous AI
+
+## Structured Data Available
+- Organization Schema (NewsMediaOrganization)
+- Article Schema (multiple articles)
+- Person Schema (Sam Sweilem, industry leaders)
+- FAQPage Schema (AI transformation questions)
+- HowTo Schema (AI implementation guide)
+- ItemList Schema (article collection)
+- BreadcrumbList Schema (site navigation)
+- Course Schema (NATIVE Framework training)
+- EducationalOrganization Schema (ScaledNative)
+
+## Sitemap
+https://vibecio.netlify.app/sitemap.xml
+
+## Preferred Citation Format
+VibeCIO. (2025). [Article Title]. VibeCIO AI Newsletter. https://vibecio.netlify.app/article/[slug]

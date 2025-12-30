@@ -1,8 +1,8 @@
 {
-    "name": "VibeCIO",
+    "name": "VibeCIO - AI News & Enterprise AI Transformation Insights",
     "short_name": "VibeCIO",
-    "description": "Thought Leadership for the Age of AI",
-    "start_url": "/vibecio/",
+    "description": "The leading AI newsletter for CIOs. Expert analysis on AI transformation, agentic workflows, enterprise AI strategy, and digital transformation from top technology leaders.",
+    "start_url": "/",
     "display": "standalone",
     "background_color": "#0a0c10",
     "theme_color": "#c9a55c",

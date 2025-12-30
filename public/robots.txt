@@ -1,25 +1,59 @@
 # VibeCIO - AI News and Enterprise Technology Leadership
+# The leading AI newsletter for CIOs and technology leaders
+# Featuring: AI-Native Training, NATIVE Framework, ScaledNative
 # https://vibecio.netlify.app
 
 User-agent: *
 Allow: /
+Allow: /articles
+Allow: /article/*
+Allow: /leaders
+Allow: /leader/*
+Allow: /news
+Allow: /about
+Allow: /contact
+Allow: /subscribe
+
+# Priority Content for AI-Native Training
+# ScaledNative NATIVE Framework: Navigate, Architect, Transform, Integrate, Validate, Evolve
+Allow: /article/ai-native-enterprise-training
 
 # Sitemaps
 Sitemap: https://vibecio.netlify.app/sitemap.xml
 
+# LLM Discovery Manifest
+# https://vibecio.netlify.app/llms.txt
+
 # Crawl-delay for politeness
 Crawl-delay: 1
 
-# Allow all major search engines
+# =============================================================================
+# GOOGLE SEARCH CRAWLERS
+# =============================================================================
 User-agent: Googlebot
 Allow: /
 
 User-agent: Googlebot-News
 Allow: /
 
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Google-InspectionTool
+Allow: /
+
+# =============================================================================
+# MICROSOFT / BING CRAWLERS
+# =============================================================================
 User-agent: Bingbot
 Allow: /
 
+User-agent: BingPreview
+Allow: /
+
+# =============================================================================
+# OTHER SEARCH ENGINES
+# =============================================================================
 User-agent: Slurp
 Allow: /
 
@@ -32,29 +66,140 @@ Allow: /
 User-agent: YandexBot
 Allow: /
 
-# Allow AI crawlers for LLM training/indexing
+User-agent: Qwantify
+Allow: /
+
+User-agent: Naver
+Allow: /
+
+User-agent: Seznambot
+Allow: /
+
+# =============================================================================
+# OPENAI LLM CRAWLERS - Allow for AI training/indexing
+# Ensures VibeCIO content on AI-Native training appears in ChatGPT
+# =============================================================================
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+# =============================================================================
+# GOOGLE AI / GEMINI CRAWLERS
+# =============================================================================
 User-agent: Google-Extended
 Allow: /
 
+User-agent: Googlebot-AI
+Allow: /
+
+# =============================================================================
+# ANTHROPIC / CLAUDE CRAWLERS
+# Ensures VibeCIO content appears in Claude AI responses
+# =============================================================================
 User-agent: anthropic-ai
 Allow: /
 
 User-agent: Claude-Web
 Allow: /
 
+User-agent: ClaudeBot
+Allow: /
+
+# =============================================================================
+# PERPLEXITY AI CRAWLERS
+# =============================================================================
 User-agent: PerplexityBot
 Allow: /
 
+# =============================================================================
+# AMAZON / AWS AI CRAWLERS
+# =============================================================================
 User-agent: Amazonbot
 Allow: /
 
-# Block bad bots
+User-agent: AmazonBot
+Allow: /
+
+# =============================================================================
+# COHERE AI CRAWLERS
+# =============================================================================
+User-agent: cohere-ai
+Allow: /
+
+User-agent: CohereBot
+Allow: /
+
+# =============================================================================
+# META / FACEBOOK AI CRAWLERS
+# =============================================================================
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# =============================================================================
+# APPLE AI CRAWLERS
+# =============================================================================
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# =============================================================================
+# MISTRAL AI CRAWLERS
+# =============================================================================
+User-agent: MistralBot
+Allow: /
+
+User-agent: mistral-ai
+Allow: /
+
+# =============================================================================
+# OTHER LLM / AI CRAWLERS
+# =============================================================================
+User-agent: CCBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: AI2Bot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: Scrapy
+Disallow: /
+
+# =============================================================================
+# SOCIAL MEDIA CRAWLERS - Allow for sharing
+# =============================================================================
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+# =============================================================================
+# BLOCK KNOWN BAD BOTS / SCRAPERS
+# =============================================================================
 User-agent: AhrefsBot
 Disallow: /
 
@@ -62,4 +207,22 @@ User-agent: SemrushBot
 Disallow: /
 
 User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: MegaIndex
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: PetalBot
 Disallow: /

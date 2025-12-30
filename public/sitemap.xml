@@ -6,9 +6,48 @@
   <!-- Homepage -->
   <url>
     <loc>https://vibecio.netlify.app/</loc>
-    <lastmod>2025-12-27</lastmod>
+    <lastmod>2025-12-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+  </url>
+  
+  <!-- FEATURED: AI-Native Enterprise Training (ScaledNative SEO Priority) -->
+  <url>
+    <loc>https://vibecio.netlify.app/article/ai-native-enterprise-training</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <news:news>
+      <news:publication>
+        <news:name>VibeCIO</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-12-29</news:publication_date>
+      <news:title>The Enterprise AI-Native Imperative: Why 95% of AI Pilots Fail</news:title>
+      <news:keywords>AI-Native training, NATIVE Framework, ScaledNative, enterprise AI training, AI workforce transformation, AI certification, Navigate Architect Transform Integrate Validate Evolve, AI skill verification, corporate AI training, AI learning platform, workforce AI readiness, AI training ROI, enterprise training platform, AI-Native transformation, AI capability building</news:keywords>
+    </news:news>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&amp;h=500&amp;fit=crop</image:loc>
+      <image:title>AI-Native Training Enterprise Transformation</image:title>
+      <image:caption>How the NATIVE Framework is redefining workforce AI transformation for enterprises</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- NEW: 2026 Financial Services Inflection Point -->
+  <url>
+    <loc>https://vibecio.netlify.app/article/2026-inflection-point-financial-services</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <news:news>
+      <news:publication>
+        <news:name>VibeCIO</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-12-29</news:publication_date>
+      <news:title>2026 Is the Inflection Point for Financial Services and Insurance</news:title>
+      <news:keywords>financial services AI, insurance AI, legacy modernization, AI-native platforms, fintech, insurtech, digital transformation 2026</news:keywords>
+    </news:news>
   </url>
   
   <!-- Featured Article: Sam Sweilem on AI Transformation -->
@@ -24,23 +63,52 @@
       </news:publication>
       <news:publication_date>2025-12-26</news:publication_date>
       <news:title>Why AI Transformations Fail Before They Start - Sam Sweilem</news:title>
-      <news:keywords>Sam Sweilem, AI transformation, enterprise AI, CIO, HealthPlan Services, AI strategy, AI governance</news:keywords>
+      <news:keywords>Sam Sweilem, AI transformation, enterprise AI, CIO, HealthPlan Services, AI strategy, AI governance, foundation first methodology</news:keywords>
     </news:news>
   </url>
   
   <!-- Main Content Sections -->
   <url>
     <loc>https://vibecio.netlify.app/articles</loc>
-    <lastmod>2025-12-27</lastmod>
+    <lastmod>2025-12-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
     <loc>https://vibecio.netlify.app/leaders</loc>
-    <lastmod>2025-12-27</lastmod>
+    <lastmod>2025-12-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  
+  <!-- Category Pages for SEO -->
+  <url>
+    <loc>https://vibecio.netlify.app/articles?category=strategy</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://vibecio.netlify.app/articles?category=technology</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://vibecio.netlify.app/articles?category=trends</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://vibecio.netlify.app/articles?category=insights</loc>
+    <lastmod>2025-12-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   
   <!-- Sam Sweilem Profile -->
@@ -60,7 +128,7 @@
   
   <url>
     <loc>https://vibecio.netlify.app/news</loc>
-    <lastmod>2025-12-27</lastmod>
+    <lastmod>2025-12-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -72,12 +140,35 @@
     <priority>0.7</priority>
   </url>
   
+  <url>
+    <loc>https://vibecio.netlify.app/contact</loc>
+    <lastmod>2025-12-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://vibecio.netlify.app/privacy</loc>
+    <lastmod>2025-12-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  
   <!-- Key Articles -->
   <url>
     <loc>https://vibecio.netlify.app/article/inference-wars</loc>
     <lastmod>2025-12-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <news:news>
+      <news:publication>
+        <news:name>VibeCIO</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-12-26</news:publication_date>
+      <news:title>The Inference Wars: Why NVIDIA Paid $20 Billion for Groq's Technology</news:title>
+      <news:keywords>NVIDIA, Groq, inference, AI hardware, LPU, GPU, AI infrastructure</news:keywords>
+    </news:news>
   </url>
   
   <url>
@@ -85,6 +176,15 @@
     <lastmod>2025-12-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <news:news>
+      <news:publication>
+        <news:name>VibeCIO</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-12-25</news:publication_date>
+      <news:title>From 10x to 100x: The Rise of the AI Orchestrator</news:title>
+      <news:keywords>AI orchestrator, 10x developer, software development, AI coding, vibe coding</news:keywords>
+    </news:news>
   </url>
   
   <url>
@@ -92,6 +192,64 @@
     <lastmod>2025-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <news:news>
+      <news:publication>
+        <news:name>VibeCIO</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-12-24</news:publication_date>
+      <news:title>Agentic Workflows: Beyond Simple Automation</news:title>
+      <news:keywords>agentic AI, AI automation, AI workflows, autonomous AI agents, enterprise automation</news:keywords>
+    </news:news>
+  </url>
+  
+  <url>
+    <loc>https://vibecio.netlify.app/article/sovereign-ai-nations</loc>
+    <lastmod>2025-12-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://vibecio.netlify.app/article/82-percent-threshold</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://vibecio.netlify.app/article/ai-security-agents</loc>
+    <lastmod>2025-12-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://vibecio.netlify.app/article/cio-mandate-value-engine</loc>
+    <lastmod>2025-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://vibecio.netlify.app/article/edge-inference-decision</loc>
+    <lastmod>2025-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://vibecio.netlify.app/article/ai-governance-guardrails</loc>
+    <lastmod>2025-12-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://vibecio.netlify.app/article/skills-gap-reality</loc>
+    <lastmod>2025-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   
   <url>
@@ -126,6 +284,28 @@
     <loc>https://vibecio.netlify.app/article/legacy-modernization-ai</loc>
     <lastmod>2025-11-28</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Leader Profiles -->
+  <url>
+    <loc>https://vibecio.netlify.app/leader/elena-rodriguez</loc>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://vibecio.netlify.app/leader/david-chen</loc>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://vibecio.netlify.app/leader/clark-kent-henderson</loc>
+    <lastmod>2025-12-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
