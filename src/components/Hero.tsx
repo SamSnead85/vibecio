@@ -7,7 +7,7 @@ interface HeroProps {
 
 export default function Hero({ onOpenCoverStory }: HeroProps) {
     return (
-        <section className="relative flex items-center pb-16 pt-28 md:pt-32 md:pb-20 overflow-hidden">
+        <section className="relative flex items-center pb-16 pt-36 md:pt-44 md:pb-24 overflow-hidden">
             {/* Background Image with Overlay */}
             <div className="absolute inset-0">
                 <img
