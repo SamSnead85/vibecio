@@ -209,6 +209,38 @@ export const breakingNews: BreakingNews[] = [
 
 export const articles: Article[] = [
     {
+        id: "whps-nvidia-ai-contact-center",
+        title: "Wipro Healthcare Solutions Transforms Contact Center Operations with NVIDIA AI",
+        subtitle: "A Blueprint for Enterprise CIOs: How NVIDIA NeMo and Riva are Driving Measurable ROI in Healthcare Customer Service",
+        category: "healthcare",
+        author: "VibeCIO Analysis",
+        date: "2026-01-22",
+        readTime: 10,
+        featured: true,
+        image: "/whps-nvidia-cover.jpg",
+        insights: [
+            "First-call resolution jumped from 84% to 92%—an 8-percentage-point improvement that directly reduces repeat calls and elevates customer satisfaction",
+            "NVIDIA's full-stack AI platform (NeMo, Riva, Triton, TensorRT) enables production-ready deployment at enterprise scale with HIPAA compliance",
+            "The 'agent-assist first, automate later' strategy builds organizational confidence in AI accuracy before expanding autonomous capabilities"
+        ],
+        content: [
+            "In an era where customer experience directly impacts bottom-line results, Wipro Healthcare Process Solutions (WHPS) has emerged as a pioneering example of how enterprise AI can deliver tangible, measurable outcomes. By deploying NVIDIA's full-stack AI platform—including NeMo and Riva—WHPS has fundamentally transformed its contact center operations, achieving results that should command the attention of every CIO evaluating AI investments.",
+            "The deployment metrics speak for themselves. First-call resolution increased from 84% to 92%—an 8-percentage-point improvement that directly translates to reduced repeat calls and higher customer satisfaction. Average handle time was reduced by 20%, enabling agents to serve more customers without sacrificing service quality. Perhaps most compelling for budget-conscious CIOs: an initial 10% reduction in live agent requirements, demonstrating early workforce optimization benefits.",
+            "These aren't theoretical projections or vendor marketing claims. They represent production metrics from a live enterprise deployment, offering a reliable benchmark for CIOs building business cases for AI transformation in healthcare and beyond.",
+            "At the core of the WHPS deployment is an AI agent-assist system built on NVIDIA's enterprise AI stack. NVIDIA NeMo provides the foundational large language model capabilities for understanding context, generating responses, and enabling sophisticated conversational AI. NVIDIA Riva delivers real-time automatic speech recognition (ASR) and text-to-speech (TTS) capabilities essential for voice-based customer interactions.",
+            "The infrastructure layer is equally sophisticated. NVIDIA Triton Inference Server ensures high-performance, low-latency model serving at enterprise scale, while NVIDIA TensorRT optimizes inference performance for production workloads. This full-stack approach—from model training to production inference—reduces integration complexity and accelerates time-to-value.",
+            "The current implementation augments human agents with AI-powered recommendations, real-time guidance, and automated knowledge retrieval. WHPS is now transitioning toward a fully AI-powered virtual assistant—a trajectory that illustrates the phased approach many enterprises are adopting for AI-driven customer service.",
+            "The WHPS deployment exemplifies several strategic principles that CIOs should consider. First, start with agent-assist, then scale to automation. Rather than attempting full automation immediately, WHPS began by supporting human agents, building confidence in AI accuracy before expanding scope. This approach reduces risk and generates organizational buy-in.",
+            "Second, measure what matters. The focus on first-call resolution and handle time reflects metrics that directly impact operational costs and customer satisfaction—not vanity metrics that look good in presentations but don't move the needle on business outcomes.",
+            "Third, leverage full-stack integration. The comprehensive NVIDIA AI Enterprise platform—from training frameworks to inference optimization—reduces the complexity of managing multiple vendors and accelerates deployment timelines.",
+            "Fourth, build for healthcare-specific compliance from day one. The deployment architecture supports on-premises or cloud deployment, enabling compliance with healthcare data regulations including HIPAA requirements. For healthcare CIOs, this is non-negotiable.",
+            "This contact center transformation is part of Wipro's broader initiative leveraging NVIDIA AI Enterprise across multiple industries. Through the Wipro Enterprise Generative AI (WeGA) Studio, the company is deploying NVIDIA NIM Agent Blueprints across healthcare, financial services, and communications sectors.",
+            "'Enterprises are increasingly seeking measurable business benefits in order to accelerate AI adoption within their businesses and drive innovation across various industries,' noted Nagendra Bandaru, President and Managing Partner – Enterprise Futuring at Wipro. This sentiment captures the shift from AI experimentation to AI execution that defines the current enterprise landscape.",
+            "For CIOs evaluating contact center AI investments, the WHPS deployment offers a clear template. The technology stack is proven. The metrics are documented. The phased deployment methodology—starting with agent-assist, building confidence, then expanding to automation—provides a risk-managed path to transformation.",
+            "As WHPS transitions from agent-assist to fully autonomous virtual assistants, the deployment serves as a template for enterprises navigating their own AI transformation journeys. For CIOs evaluating contact center AI, the message is clear: the technology has matured, the metrics are proven, and the competitive advantage goes to those who move decisively."
+        ]
+    },
+    {
         id: "ai-native-enterprise-training",
         title: "The Enterprise AI-Native Imperative: Why 95% of AI Pilots Fail",
         subtitle: "How the NATIVE Framework Is Redefining Workforce AI Transformation",
