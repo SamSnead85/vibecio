@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { articles } from '../data/content';
-import { ArrowLeft, Clock, User, Calendar, Share2, Bookmark, ChevronRight, Sparkles } from 'lucide-react';
+import { ArrowLeft, Clock, User, Calendar, Share2, ChevronRight, Sparkles } from 'lucide-react';
 import SEO from '../components/SEO';
 import BookmarkButton from '../components/BookmarkButton';
 
@@ -125,6 +125,7 @@ export default function ArticlePage() {
                             src={article.image}
                             alt={article.title}
                             className="w-full h-full object-cover"
+                            style={{ objectPosition: 'center 20%' }}
                         />
                         {/* Gradient Overlay */}
                         <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-zinc-950)] via-[var(--color-zinc-950)]/70 to-transparent" />
@@ -193,8 +194,7 @@ export default function ArticlePage() {
                                 <BookmarkButton
                                     type="article"
                                     id={article.id}
-                                    title={article.title}
-                                    className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all hover:scale-105 text-sm font-medium"
+                                    showLabel
                                 />
                             </div>
                         </div>
