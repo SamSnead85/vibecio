@@ -7,6 +7,8 @@ import ReadingProgress from './components/ReadingProgress';
 import SearchModal from './components/SearchModal';
 import Toast from './components/Toast';
 import LoadingScreen from './components/LoadingScreen';
+
+// Core Pages
 import Home from './pages/Home';
 import ArticlesPage from './pages/ArticlesPage';
 import ArticlePage from './pages/ArticlePage';
@@ -21,6 +23,16 @@ import HistoryPage from './pages/HistoryPage';
 import SubscribePage from './pages/SubscribePage';
 import PrivacyPage from './pages/PrivacyPage';
 import NotFound from './pages/NotFound';
+
+// New Premium Pages
+import EditorialTeamPage from './pages/EditorialTeamPage';
+import CareersPage from './pages/CareersPage';
+import ResearchPage from './pages/ResearchPage';
+import PodcastPage from './pages/PodcastPage';
+import EventsPage from './pages/EventsPage';
+import AdvertisePage from './pages/AdvertisePage';
+import TermsPage from './pages/TermsPage';
+import AccessibilityPage from './pages/AccessibilityPage';
 
 // Scroll restoration component
 function ScrollToTop() {
@@ -69,6 +81,7 @@ function AppContent() {
 
         <main>
           <Routes>
+            {/* Core Routes */}
             <Route path="/" element={<Home />} />
             <Route path="/articles" element={<ArticlesPage />} />
             <Route path="/article/:id" element={<ArticlePage />} />
@@ -82,6 +95,18 @@ function AppContent() {
             <Route path="/history" element={<HistoryPage />} />
             <Route path="/subscribe" element={<SubscribePage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
+
+            {/* New Premium Routes */}
+            <Route path="/team" element={<EditorialTeamPage />} />
+            <Route path="/careers" element={<CareersPage />} />
+            <Route path="/research" element={<ResearchPage />} />
+            <Route path="/podcast" element={<PodcastPage />} />
+            <Route path="/events" element={<EventsPage />} />
+            <Route path="/advertise" element={<AdvertisePage />} />
+            <Route path="/terms" element={<TermsPage />} />
+            <Route path="/accessibility" element={<AccessibilityPage />} />
+
+            {/* 404 */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

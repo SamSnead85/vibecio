@@ -6,6 +6,10 @@ export interface Leader {
     bio: string;
     expertise: string[];
     avatar?: string;
+    linkedin?: string;
+    twitter?: string;
+    email?: string;
+    featured?: boolean;
 }
 
 export interface NewsItem {
@@ -32,8 +36,7 @@ export interface TransformationSpotlight {
     image?: string;
 }
 
-// New types for enhanced content
-
+// Enhanced Article Categories
 export type ArticleCategory = 'strategy' | 'technology' | 'trends' | 'insights' | 'healthcare' | 'leadership';
 
 export interface Article {
@@ -48,6 +51,8 @@ export interface Article {
     insights: string[];
     featured?: boolean;
     image?: string;
+    tags?: string[];
+    relatedArticles?: string[];
 }
 
 export interface BreakingNews {
@@ -62,4 +67,108 @@ export interface BreakingNews {
 export interface DailyFeature {
     articleId: string;
     featureDate: string;
+}
+
+// New Types for Enhanced Platform
+
+export interface TeamMember {
+    id: string;
+    name: string;
+    role: string;
+    bio: string;
+    avatar?: string;
+    linkedin?: string;
+    twitter?: string;
+}
+
+export interface Sponsor {
+    id: string;
+    name: string;
+    logo: string;
+    tier: 'platinum' | 'gold' | 'silver';
+    website: string;
+    description: string;
+}
+
+export interface Event {
+    id: string;
+    title: string;
+    date: string;
+    location: string;
+    type: 'webinar' | 'conference' | 'roundtable' | 'virtual';
+    description: string;
+    registrationUrl?: string;
+    featured?: boolean;
+}
+
+export interface Podcast {
+    id: string;
+    title: string;
+    guest: string;
+    guestTitle: string;
+    duration: number;
+    date: string;
+    description: string;
+    audioUrl?: string;
+    transcript?: string[];
+    image?: string;
+}
+
+export interface Report {
+    id: string;
+    title: string;
+    subtitle: string;
+    category: 'research' | 'whitepaper' | 'benchmark' | 'survey';
+    date: string;
+    pages: number;
+    downloadUrl?: string;
+    preview: string;
+    image?: string;
+    featured?: boolean;
+}
+
+export interface Job {
+    id: string;
+    title: string;
+    department: string;
+    location: string;
+    type: 'full-time' | 'part-time' | 'contract';
+    remote: boolean;
+    description: string;
+    requirements: string[];
+    benefits: string[];
+    postedDate: string;
+}
+
+export interface Testimonial {
+    id: string;
+    quote: string;
+    author: string;
+    title: string;
+    company: string;
+    avatar?: string;
+}
+
+export interface FAQ {
+    id: string;
+    question: string;
+    answer: string;
+    category: string;
+}
+
+export interface SubscriptionTier {
+    id: string;
+    name: string;
+    price: number;
+    period: 'monthly' | 'yearly';
+    features: string[];
+    recommended?: boolean;
+}
+
+export interface UserPreferences {
+    theme: 'dark' | 'light' | 'system';
+    fontSize: 'small' | 'medium' | 'large';
+    emailNotifications: boolean;
+    weeklyDigest: boolean;
+    breakingNewsAlerts: boolean;
 }
