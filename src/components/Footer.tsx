@@ -5,14 +5,14 @@ const footerLinks = {
     content: [
         { label: 'Articles', href: '/articles' },
         { label: 'Leaders', href: '/leaders' },
-        { label: 'Topics', href: '/topics' },
+        { label: 'AI Trends', href: '/ai-trends' },
         { label: 'Research', href: '/research' },
         { label: 'Podcast', href: '/podcast' },
     ],
     categories: [
+        { label: 'Industries', href: '/industries' },
+        { label: 'Reports', href: '/reports' },
         { label: 'Webinars', href: '/webinars' },
-        { label: 'Glossary', href: '/glossary' },
-        { label: 'Contributors', href: '/contributors' },
         { label: 'Case Studies', href: '/case-studies' },
         { label: 'Events', href: '/events' },
         { label: 'Awards', href: '/awards' },
@@ -28,9 +28,10 @@ const footerLinks = {
     resources: [
         { label: 'Resources', href: '/resources' },
         { label: 'Benchmarks', href: '/benchmarks' },
-        { label: 'Advertise', href: '/advertise' },
+        { label: 'Topics', href: '/topics' },
+        { label: 'Glossary', href: '/glossary' },
+        { label: 'Contributors', href: '/contributors' },
         { label: 'Partners', href: '/partners' },
-        { label: 'FAQ', href: '/faq' },
     ],
 };
 

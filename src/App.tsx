@@ -45,6 +45,9 @@ import ResourcesPage from './pages/ResourcesPage';
 import PressPage from './pages/PressPage';
 import AwardsPage from './pages/AwardsPage';
 import CommunityPage from './pages/CommunityPage';
+import AITrendsPage from './pages/AITrendsPage';
+import ReportsPage from './pages/ReportsPage';
+import IndustriesPage from './pages/IndustriesPage';
 
 // Scroll restoration component
 function ScrollToTop() {
@@ -129,6 +132,9 @@ function AppContent() {
             <Route path="/press" element={<PressPage />} />
             <Route path="/awards" element={<AwardsPage />} />
             <Route path="/community" element={<CommunityPage />} />
+            <Route path="/ai-trends" element={<AITrendsPage />} />
+            <Route path="/reports" element={<ReportsPage />} />
+            <Route path="/industries" element={<IndustriesPage />} />
 
             {/* 404 */}
             <Route path="*" element={<NotFound />} />

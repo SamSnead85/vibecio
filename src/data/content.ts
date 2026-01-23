@@ -145,6 +145,70 @@ export const leaders: Leader[] = [
         company: "Pacific Bank Holdings",
         bio: "Jennifer Wu oversees the data and AI strategy for Pacific Bank's $890B in assets under management. Her focus on AI governance and explainability has made Pacific Bank a model for responsible AI in financial services. Jennifer's team has implemented over 200 AI models in production, each with full audit trails and explainability reports required by regulators.",
         expertise: ["Financial AI", "AI Governance", "Regulatory Compliance", "Explainable AI"]
+    },
+    {
+        id: "david-chen",
+        name: "David Chen",
+        title: "CTO",
+        company: "AeroSpace Dynamics",
+        bio: "David Chen leads technology innovation at one of the world's premier aerospace manufacturers. His pioneering work in AI-assisted design has reduced aircraft development cycles by 35% while improving safety metrics. David's team uses generative AI to explore thousands of design variations, identifying optimal configurations that human engineers might never discover. He holds 47 patents in aerospace engineering and AI applications.",
+        expertise: ["Aerospace Engineering", "Generative Design AI", "Digital Twin Technology", "Safety-Critical AI"]
+    },
+    {
+        id: "rachel-foster",
+        name: "Rachel Foster",
+        title: "CIO",
+        company: "Terraform Energy",
+        bio: "Rachel Foster is transforming the energy sector through AI-driven grid optimization and renewable integration. At Terraform Energy, her AI systems manage real-time power distribution across 12 million customers, optimizing for both reliability and sustainability. Rachel's predictive maintenance AI has prevented $2.3B in potential outages over three years. She serves on the DOE's advisory council for AI in critical infrastructure.",
+        expertise: ["Energy Grid AI", "Renewable Integration", "Predictive Maintenance", "Critical Infrastructure"]
+    },
+    {
+        id: "thomas-bergmann",
+        name: "Dr. Thomas Bergmann",
+        title: "Chief Digital Officer",
+        company: "NovaPharma International",
+        bio: "Dr. Thomas Bergmann leads digital transformation at one of Europe's largest pharmaceutical companies. His AI-accelerated drug discovery platform has reduced early-stage research timelines from 4 years to 18 months, with three AI-discovered compounds now in clinical trials. Thomas holds an MD/PhD from Heidelberg and previously led AI research at a major tech company.",
+        expertise: ["Drug Discovery AI", "Clinical Trial Optimization", "Healthcare Data Science", "Regulatory AI"]
+    },
+    {
+        id: "amanda-washington",
+        name: "Amanda Washington",
+        title: "CIO",
+        company: "Continental Logistics",
+        bio: "Amanda Washington has revolutionized supply chain operations at Continental Logistics through AI-powered route optimization and demand forecasting. Her systems coordinate 45,000 vehicles daily, while AI-driven demand prediction has reduced warehousing costs by $890M annually. Amanda's 'autonomous supply chain' vision is being studied by business schools worldwide as a template for logistics AI transformation.",
+        expertise: ["Supply Chain AI", "Route Optimization", "Demand Forecasting", "Autonomous Logistics"]
+    },
+    {
+        id: "kevin-mueller",
+        name: "Kevin Mueller",
+        title: "Global CTO",
+        company: "TeleConnect Networks",
+        bio: "Kevin Mueller oversees technology strategy for a telecommunications giant serving 180 million customers globally. His AI initiatives in network optimization have improved call quality by 40% while reducing infrastructure costs by $3.2B. Kevin's team pioneered the use of AI for real-time network self-healing, cutting customer-affecting outages by 78%.",
+        expertise: ["Telecom AI", "Network Optimization", "5G/6G Strategy", "AI-Driven Operations"]
+    },
+    {
+        id: "lisa-nakamura",
+        name: "Dr. Lisa Nakamura",
+        title: "Chief AI Officer",
+        company: "Zenith Retail Group",
+        bio: "Dr. Lisa Nakamura leads AI strategy across Zenith's 8,000 retail locations and e-commerce platforms. Her computer vision systems power 'frictionless shopping' experiences serving 50 million customers weekly, while AI-driven inventory management has reduced stockouts by 89%. Lisa previously led machine learning research at a major tech company and holds a PhD from MIT.",
+        expertise: ["Retail AI", "Computer Vision", "Inventory Optimization", "Customer Experience AI"]
+    },
+    {
+        id: "marcus-johnson",
+        name: "Marcus Johnson",
+        title: "CIO",
+        company: "Apex Financial Services",
+        bio: "Marcus Johnson is redefining wealth management through AI at Apex Financial Services, which manages $420B in client assets. His AI advisory systems provide personalized investment guidance to 2 million clients, democratizing sophisticated financial planning. Marcus's fraud detection AI has prevented $1.2B in losses, while his commitment to AI transparency has earned regulatory praise.",
+        expertise: ["Wealth Management AI", "Fraud Detection", "Algorithmic Trading", "Regulatory Technology"]
+    },
+    {
+        id: "sophia-andersen",
+        name: "Sophia Andersen",
+        title: "Chief Technology Officer",
+        company: "Nordic Sustainable Industries",
+        bio: "Sophia Andersen leads technology innovation at one of Scandinavia's largest sustainable manufacturing conglomerates. Her AI systems optimize energy consumption across 45 factories, reducing carbon emissions by 2.3 million tons annually. Sophia's 'Green AI' initiative ensures that AI infrastructure itself is carbon-neutral, setting an industry standard for sustainable technology leadership.",
+        expertise: ["Sustainable Technology", "Green AI", "Manufacturing Efficiency", "Carbon Optimization"]
     }
 ];
 
@@ -806,6 +870,152 @@ export const articles: Article[] = [
             "Second, engage quantum-ready vendors. Major cloud providers and security vendors are building post-quantum capabilities into their platforms. Ensure your vendor relationships include discussions about quantum readiness and transition timelines.",
             "Third, identify potential quantum use cases in your domain. Drug discovery, financial modeling, supply chain optimization, and materials science are early candidates for quantum advantage. Understanding where quantum could impact your industry helps inform strategic planning.",
             "The enterprises that will benefit most from quantum-AI convergence are those that began preparing before the technology was production-ready. Quantum computing follows the pattern of every major technology shift: the organizations that invest early in understanding and capability building capture disproportionate value when the technology matures."
+        ]
+    },
+    {
+        id: "multimodal-ai-enterprise",
+        title: "Beyond Text: How Multimodal AI Is Transforming Enterprise Operations",
+        subtitle: "Vision, Audio, and Document Understanding Are Creating New Automation Frontiers",
+        category: "technology",
+        author: "VibeCIO Analysis",
+        date: "2026-01-19",
+        readTime: 12,
+        featured: true,
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
+        insights: [
+            "Multimodal AI models now process documents with 98% accuracy, eliminating manual data entry for complex forms",
+            "Computer vision in manufacturing is preventing $12B in annual quality defects across early adopters",
+            "Audio AI is transforming call centers with real-time sentiment analysis and automated compliance monitoring"
+        ],
+        content: [
+            "The first wave of enterprise AI focused almost exclusively on text. Chatbots, document summarization, code generation—all fundamentally language-based. But the models emerging in 2026 understand sight and sound with increasing sophistication, opening automation possibilities that were impossible just two years ago.",
+            "Consider document processing. Enterprises deal with an endless stream of invoices, contracts, claims forms, and applications. Traditional OCR extracted text; multimodal AI understands documents. It recognizes handwritten annotations, interprets tables, and understands that a signature at the bottom of a contract isn't just scribbles but a legally binding commitment. Early adopters report 98% accuracy on complex document processing—accuracy that finally makes full automation viable.",
+            "Manufacturing quality control presents another compelling example. Computer vision systems now inspect products at speeds and accuracy levels impossible for human workers. A semiconductor manufacturer using multimodal AI for wafer inspection catches defects that would have cost $400M annually in downstream failures. The systems don't just identify defects—they classify root causes, enabling preventive action.",
+            "In customer service, audio AI is creating a fundamental shift. Real-time speech recognition combined with sentiment analysis means systems can detect customer frustration before agents might notice, prompting intervention. Compliance monitoring that once required sampling a fraction of calls now covers 100% of conversations, automatically flagging potential issues.",
+            "The integration challenge is significant. Multimodal AI requires data pipelines that handle images, audio, and video at scale—infrastructure most enterprises don't have. But the capability gap between organizations investing in multimodal infrastructure and those waiting is widening rapidly.",
+            "CIOs should begin by auditing processes where visual or audio information is central. Quality inspection, document processing, customer interaction analysis, and security monitoring are natural starting points. Then assess whether current infrastructure can support the data volumes multimodal AI requires, and plan upgrades accordingly."
+        ]
+    },
+    {
+        id: "ai-cybersecurity-arms-race",
+        title: "AI vs. AI: The New Cybersecurity Arms Race",
+        subtitle: "How Enterprises Are Deploying AI Defense Against AI-Powered Attacks",
+        category: "strategy",
+        author: "VibeCIO Security Analysis",
+        date: "2026-01-17",
+        readTime: 11,
+        featured: false,
+        image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=500&fit=crop",
+        insights: [
+            "AI-generated phishing emails now succeed 3x more often than human-crafted attempts",
+            "Defensive AI can identify novel attack patterns 47% faster than rule-based systems",
+            "Security teams deploying AI 'purple teams' see 60% reduction in mean time to detection"
+        ],
+        content: [
+            "The cybersecurity landscape has entered a new phase: AI vs. AI combat. Threat actors are leveraging generative AI to craft more convincing phishing campaigns, to identify vulnerabilities faster, and to adapt attacks in real-time. Defenders are responding with AI systems that can match this speed and sophistication.",
+            "The offensive capabilities are sobering. AI-generated phishing emails succeed three times more often than human-crafted attempts because they're personalized using publicly available information, written with perfect grammar, and designed by models that have learned what works. Deepfake voice calls are now convincing enough to spoof executive identity for urgent wire transfers.",
+            "Defensive AI is evolving to meet the challenge. Modern security AI doesn't rely on signatures or rules—it learns what normal looks like for every user, every system, every network flow, and flags anomalies instantly. When a user's behavior suddenly changes—accessing unusual files at odd hours from an unfamiliar location—AI flags it immediately, before damage occurs.",
+            "The concept of AI 'purple teaming' is gaining traction: using AI to simulate sophisticated attacks against your own infrastructure, identifying weaknesses before adversaries do. Organizations running continuous AI red-team exercises report finding vulnerabilities that traditional penetration testing missed entirely.",
+            "The human element remains critical. AI can process more signals than any security team, but humans still make the strategic decisions: which risks to accept, which to mitigate, which to transfer. The enterprises succeeding in this arms race are those that view AI as augmenting their security teams, not replacing them.",
+            "CISOs need to assume their adversaries are using AI—because they are. Security AI investment is no longer optional. But equally important is training security teams to work effectively with AI tools, understanding their outputs and knowing when to override their recommendations."
+        ]
+    },
+    {
+        id: "edge-ai-enterprise",
+        title: "Edge AI at Enterprise Scale: Beyond Proof of Concept",
+        subtitle: "Moving AI Processing to the Network Edge for Real-Time, Private, Resilient Operations",
+        category: "technology",
+        author: "VibeCIO Infrastructure Analysis",
+        date: "2026-01-14",
+        readTime: 10,
+        featured: false,
+        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=500&fit=crop",
+        insights: [
+            "Edge AI deployments grew 340% in 2025, driven by latency, privacy, and reliability requirements",
+            "Manufacturing plants running edge AI see 5ms response times vs. 200ms for cloud-based processing",
+            "Healthcare organizations using on-premises AI maintain HIPAA compliance while enabling real-time diagnostics"
+        ],
+        content: [
+            "The assumption that AI requires massive cloud data centers is being challenged by a growing movement toward edge AI. For use cases requiring real-time response, data privacy, or resilience against connectivity failures, running AI at the network edge—in factories, hospitals, retail stores, or even vehicles—offers compelling advantages.",
+            "Latency is often the primary driver. A manufacturing robot that needs to stop instantly when it detects a safety hazard can't wait 200 milliseconds for a cloud round-trip. Edge AI running on local hardware delivers responses in 5 milliseconds or less. The difference isn't just measurable—it's safety-critical.",
+            "Privacy and regulatory compliance provide another motivation. Healthcare organizations that need AI-assisted diagnostics face strict requirements about where patient data can travel. Running AI models on-premises keeps sensitive data within controlled environments, satisfying HIPAA requirements while still enabling sophisticated analysis.",
+            "Reliability matters too. A retail store's AI-powered checkout system that fails whenever internet connectivity drops isn't an improvement over cashiers. Edge deployment ensures core functionality continues regardless of network status.",
+            "The challenge is complexity. Managing AI models across thousands of edge locations requires sophisticated orchestration. Model updates must be deployed consistently, performance must be monitored remotely, and edge hardware must be maintained. Enterprises are building 'edge AI platforms' that abstract this complexity, but the tooling is still maturing.",
+            "CIOs evaluating edge AI should start with use cases where latency, privacy, or reliability requirements genuinely necessitate local processing. The cost and complexity of edge deployment isn't justified for every AI application—but for the right use cases, it's becoming essential."
+        ]
+    },
+    {
+        id: "responsible-ai-practice",
+        title: "From Principles to Practice: Building Responsible AI That Actually Works",
+        subtitle: "Moving Beyond AI Ethics Statements to Operational Governance Frameworks",
+        category: "strategy",
+        author: "VibeCIO Governance Analysis",
+        date: "2026-01-11",
+        readTime: 13,
+        featured: false,
+        image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=500&fit=crop",
+        insights: [
+            "78% of enterprises have AI ethics principles; only 23% have operational frameworks to enforce them",
+            "Organizations with mature AI governance deploy production models 2x faster than those without",
+            "Bias testing has prevented $2.4B in potential regulatory fines and legal settlements across early adopters"
+        ],
+        content: [
+            "Nearly every major enterprise has published AI ethics principles. The commitments are laudable: fairness, transparency, accountability, privacy. But turning principles into practice—building operational frameworks that actually govern AI systems—has proven far more difficult.",
+            "The gap between aspiration and implementation is stark. Research shows that 78% of enterprises have AI ethics statements, but only 23% have operational governance frameworks that translate those principles into enforceable processes. The result: AI systems that violate stated principles, with no one aware until damage occurs.",
+            "What does operational AI governance look like? It starts with inventory—knowing every AI system deployed, what decisions it influences, and what data it uses. Most enterprises don't have this visibility. Building it is foundational to everything else.",
+            "Testing for bias before deployment is critical, but testing after deployment equally so. Models that perform fairly in development can develop biases in production as data distributions shift. Continuous monitoring for fairness metrics—across demographic groups, across geographies, across use cases—catches problems early.",
+            "Transparency requirements must be practical. 'Explainability' means different things for different audiences. A regulator needs audit trails and model documentation. An affected individual needs understandable reasons for decisions affecting them. Building explanation capabilities that serve multiple audiences requires deliberate design.",
+            "The business case for mature AI governance is becoming clearer. Organizations with robust frameworks report faster model deployment—governance becomes an enabler rather than a bottleneck because approvals are systematic rather than ad hoc. They face less regulatory friction. And they avoid the reputational and legal costs of AI failures that grab headlines.",
+            "CIOs should treat AI governance as infrastructure, not overhead. Just as security and compliance are built into technology operations, AI governance should be built into AI operations. The enterprises that get this right will be the ones trusted to deploy AI on consequential decisions."
+        ]
+    },
+    {
+        id: "ai-talent-strategy-2026",
+        title: "The AI Talent Crisis: Why Hiring Your Way to AI Success Won't Work",
+        subtitle: "Building AI Capability Through Development, Partnership, and Organizational Design",
+        category: "insights",
+        author: "VibeCIO Talent Analysis",
+        date: "2026-01-09",
+        readTime: 10,
+        featured: false,
+        image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&h=500&fit=crop",
+        insights: [
+            "AI talent demand exceeds supply by 4:1; average enterprise has 67% of AI positions unfilled for 6+ months",
+            "Organizations developing internal talent see 3x better retention than those relying on external hiring",
+            "Cross-functional AI teams outperform siloed data science organizations on business impact metrics"
+        ],
+        content: [
+            "The math on AI talent doesn't work. Every enterprise wants machine learning engineers, data scientists, and AI architects. The supply of experienced practitioners is a fraction of demand. Compensation has inflated to unsustainable levels, yet positions remain unfilled for months. Hiring your way to AI capability isn't a viable strategy.",
+            "Forward-thinking CIOs are responding with development-first approaches. Identify employees in adjacent roles—software engineers, data analysts, domain experts—who have aptitude and interest in AI. Invest in structured learning programs that build AI capability over 12-18 months. The retention rates for internally developed talent far exceed external hires, and domain knowledge they already possess accelerates impact.",
+            "Partnership models are expanding the talent equation. Strategic relationships with AI consultancies, academic institutions, and research labs provide access to expertise without the challenges of permanent hiring. These partnerships work best when structured as capability building—not just project delivery but knowledge transfer that builds internal capacity.",
+            "Organizational design matters as much as talent strategy. Siloed data science teams often struggle to impact business outcomes because they lack domain context. Embedded models—AI practitioners paired with business units—generate faster, more relevant results. Cross-functional teams that include business stakeholders, engineers, and AI specialists outperform on every measure of impact.",
+            "The emerging role of 'AI-enabled' professionals deserves attention. These aren't AI specialists, but domain experts who deeply understand AI capabilities and can apply them to their work. Marketing managers who can design AI-powered campaigns. Finance professionals who can build AI-assisted forecasting models. This population—domain experts with AI fluency—may be the most scalable path to enterprise AI impact.",
+            "CIOs need talent strategies that acknowledge market realities. That means development investments, partnership models, organizational redesign, and a focus on AI-enabled roles alongside AI specialist roles. The enterprises that figure this out will have sustained AI capability; those that don't will remain forever in the hiring queue."
+        ]
+    },
+    {
+        id: "enterprise-ai-architecture",
+        title: "Enterprise AI Architecture: Patterns Emerging from Production Deployments",
+        subtitle: "Lessons from Organizations Running AI at Scale Across Business-Critical Systems",
+        category: "technology",
+        author: "VibeCIO Architecture Analysis",
+        date: "2026-01-07",
+        readTime: 14,
+        featured: false,
+        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=500&fit=crop",
+        insights: [
+            "Enterprises running 50+ AI models in production share common architectural patterns that accelerate deployment",
+            "AI platform teams reduce per-model deployment time from 6 months to 6 weeks",
+            "Data mesh architectures are proving essential for AI at scale, enabling decentralized ownership with centralized governance"
+        ],
+        content: [
+            "The organizations running AI at genuine enterprise scale—dozens or hundreds of models in production, processing millions of decisions daily—have converged on architectural patterns worth studying. These aren't theoretical frameworks; they're battle-tested approaches from the front lines of production AI.",
+            "The first pattern is platform thinking. Rather than building custom infrastructure for each AI initiative, leading organizations establish AI platforms that provide standardized capabilities: model serving, feature stores, experiment tracking, monitoring, and governance tooling. Teams building AI applications consume platform services rather than reinventing infrastructure.",
+            "Data architecture is equally critical. The traditional centralized data warehouse doesn't scale for AI's appetite for diverse, fresh data. Data mesh architectures—decentralized data ownership with federated governance and standardized interfaces—enable AI teams to access the data they need without bottlenecking on central data teams.",
+            "Feature stores have emerged as a critical component. Features are the transformed data inputs that AI models consume. Without shared feature infrastructure, teams recreate the same calculations redundantly, training-serving skew causes production failures, and feature quality is inconsistent. Mature AI organizations treat features as first-class assets.",
+            "Model operations (MLOps) pipelines automate the path from experiment to production. Continuous integration for models, automated testing, canary deployments, and production monitoring reduce the manual effort between 'model works in notebook' and 'model serves production traffic.' Organizations with mature MLOps deploy models 10x faster.",
+            "Governance is embedded throughout. Model registries track every model version. Data lineage tools trace what data trained which models. Audit logs capture every prediction. This isn't bureaucratic overhead—it's the infrastructure that enables confident deployment of AI on high-stakes decisions.",
+            "CIOs building enterprise AI capability should think infrastructure first. The models matter, but the platforms that enable model development, deployment, and operation matter more. Invest in AI infrastructure before scaling AI applications."
         ]
     }
 ];
