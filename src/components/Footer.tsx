@@ -5,16 +5,16 @@ const footerLinks = {
     content: [
         { label: 'Articles', href: '/articles' },
         { label: 'Leaders', href: '/leaders' },
+        { label: 'Topics', href: '/topics' },
         { label: 'Research', href: '/research' },
         { label: 'Podcast', href: '/podcast' },
-        { label: 'Webinars', href: '/webinars' },
     ],
     categories: [
-        { label: 'Strategy', href: '/articles?category=strategy' },
-        { label: 'Technology', href: '/articles?category=technology' },
-        { label: 'Healthcare', href: '/articles?category=healthcare' },
-        { label: 'Trends', href: '/articles?category=trends' },
-        { label: 'Insights', href: '/articles?category=insights' },
+        { label: 'Webinars', href: '/webinars' },
+        { label: 'Glossary', href: '/glossary' },
+        { label: 'Contributors', href: '/contributors' },
+        { label: 'Case Studies', href: '/case-studies' },
+        { label: 'Events', href: '/events' },
     ],
     company: [
         { label: 'About', href: '/about' },

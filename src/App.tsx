@@ -38,6 +38,8 @@ import FAQPage from './pages/FAQPage';
 import WebinarsPage from './pages/WebinarsPage';
 import CaseStudiesPage from './pages/CaseStudiesPage';
 import ContributorsPage from './pages/ContributorsPage';
+import TopicsPage from './pages/TopicsPage';
+import GlossaryPage from './pages/GlossaryPage';
 
 // Scroll restoration component
 function ScrollToTop() {
@@ -115,6 +117,8 @@ function AppContent() {
             <Route path="/webinars" element={<WebinarsPage />} />
             <Route path="/case-studies" element={<CaseStudiesPage />} />
             <Route path="/contributors" element={<ContributorsPage />} />
+            <Route path="/topics" element={<TopicsPage />} />
+            <Route path="/glossary" element={<GlossaryPage />} />
 
             {/* 404 */}
             <Route path="*" element={<NotFound />} />
