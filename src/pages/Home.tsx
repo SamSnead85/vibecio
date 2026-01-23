@@ -29,14 +29,14 @@ export default function Home() {
             {/* Today's Featured Article */}
             <DailyFeature onReadArticle={(article) => setSelectedArticle(article)} />
 
-            {/* CIO Leaders - More Prominent Position */}
+            {/* Deep Dive Articles Grid - Primary Content */}
+            <ArticleGrid onReadArticle={(article) => setSelectedArticle(article)} />
+
+            {/* Featured CIO Leaders */}
             <CIOLeaderboard
                 leaders={leaders}
                 onSelectLeader={(leader) => setSelectedLeader(leader)}
             />
-
-            {/* Deep Dive Articles Grid */}
-            <ArticleGrid onReadArticle={(article) => setSelectedArticle(article)} />
 
             <TransformationSpotlight spotlight={transformationSpotlight} />
 

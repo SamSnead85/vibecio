@@ -512,3 +512,252 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* =====================================================
+   NETFLIX-STYLE PREMIUM CARD EFFECTS
+   ===================================================== */
+
+/* Cinematic Card Container */
+.netflix-card {
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.netflix-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+      rgba(201, 165, 92, 0) 0%,
+      rgba(201, 165, 92, 0.03) 50%,
+      rgba(201, 165, 92, 0) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 1;
+}
+
+.netflix-card:hover {
+  transform: scale(1.05) translateY(-8px);
+  z-index: 50;
+}
+
+.netflix-card:hover::before {
+  opacity: 1;
+}
+
+/* Accent Glow Effect */
+.glow-accent {
+  box-shadow:
+    0 0 0 1px rgba(201, 165, 92, 0.1),
+    0 4px 24px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.4s ease;
+}
+
+.glow-accent:hover {
+  box-shadow:
+    0 0 0 1px rgba(201, 165, 92, 0.3),
+    0 8px 40px rgba(201, 165, 92, 0.15),
+    0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Image Reveal Effect */
+.netflix-image-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.netflix-image-container img {
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.4s ease;
+}
+
+.netflix-card:hover .netflix-image-container img {
+  transform: scale(1.15);
+  filter: brightness(1.1);
+}
+
+/* Content Slide-Up Animation */
+.netflix-content {
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.3s ease;
+}
+
+.netflix-card:hover .netflix-content {
+  transform: translateY(-4px);
+}
+
+/* Play Button Overlay */
+.netflix-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to top,
+      rgba(10, 12, 16, 0.9) 0%,
+      rgba(10, 12, 16, 0.3) 50%,
+      transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+}
+
+.netflix-card:hover .netflix-play-overlay {
+  opacity: 1;
+}
+
+.netflix-play-button {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(201, 165, 92, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.8);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 30px rgba(201, 165, 92, 0.4);
+}
+
+.netflix-card:hover .netflix-play-button {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.netflix-play-button:hover {
+  transform: scale(1.1);
+  background: var(--color-accent-light);
+}
+
+/* Premium Category Badge */
+.premium-badge {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
+  color: var(--color-zinc-950);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.5rem 0.875rem;
+  font-size: 0.65rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(201, 165, 92, 0.3);
+}
+
+/* Cinematic Featured Card */
+.featured-cinematic {
+  background: linear-gradient(135deg,
+      rgba(24, 24, 27, 0.95) 0%,
+      rgba(18, 21, 28, 0.98) 100%);
+  border: 1px solid rgba(201, 165, 92, 0.1);
+  overflow: hidden;
+}
+
+.featured-cinematic::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.featured-cinematic:hover::after {
+  opacity: 1;
+}
+
+/* =====================================================
+   ARTICLE MODAL PREMIUM READING EXPERIENCE
+   ===================================================== */
+
+.article-reading-container {
+  background: var(--color-zinc-950);
+}
+
+.article-hero-section {
+  position: relative;
+  min-height: 45vh;
+}
+
+.article-hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to top, var(--color-zinc-950), transparent);
+  pointer-events: none;
+}
+
+.article-body-section {
+  background: var(--color-zinc-950);
+  position: relative;
+  z-index: 10;
+}
+
+.article-body-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+}
+
+/* Premium Glass Panel for Sidebar */
+.glass-premium {
+  background: rgba(18, 21, 28, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Stagger delay for grid items */
+.stagger-item {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.stagger-item:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.stagger-item:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.stagger-item:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.stagger-item:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+.stagger-item:nth-child(5) {
+  animation-delay: 0.25s;
+}
+
+.stagger-item:nth-child(6) {
+  animation-delay: 0.3s;
+}
+
+.stagger-item:nth-child(7) {
+  animation-delay: 0.35s;
+}
+
+.stagger-item:nth-child(8) {
+  animation-delay: 0.4s;
+}
+
+.stagger-item:nth-child(9) {
+  animation-delay: 0.45s;
+}
