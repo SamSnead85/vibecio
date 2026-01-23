@@ -7,7 +7,7 @@ const footerLinks = {
         { label: 'Leaders', href: '/leaders' },
         { label: 'Research', href: '/research' },
         { label: 'Podcast', href: '/podcast' },
-        { label: 'Newsletter', href: '/subscribe' },
+        { label: 'Webinars', href: '/webinars' },
     ],
     categories: [
         { label: 'Strategy', href: '/articles?category=strategy' },
@@ -24,10 +24,11 @@ const footerLinks = {
         { label: 'Contact', href: '/contact' },
     ],
     resources: [
+        { label: 'Case Studies', href: '/case-studies' },
         { label: 'Advertise', href: '/advertise' },
-        { label: 'Media Kit', href: '/advertise#packages' },
-        { label: 'Sponsorship', href: '/advertise' },
-        { label: 'RSS Feed', href: '/rss' },
+        { label: 'Partners', href: '/partners' },
+        { label: 'Newsletter', href: '/subscribe' },
+        { label: 'FAQ', href: '/faq' },
     ],
 };
 

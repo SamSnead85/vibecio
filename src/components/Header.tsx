@@ -12,9 +12,10 @@ const mainNavLinks = [
 // Dropdown menu items
 const moreLinks = [
     { label: 'Podcast', href: '/podcast', icon: Mic, desc: 'Weekly conversations with CIOs' },
+    { label: 'Webinars', href: '/webinars', icon: Calendar, desc: 'Live expert sessions' },
     { label: 'Research', href: '/research', icon: BarChart3, desc: 'Reports & benchmarks' },
-    { label: 'Events', href: '/events', icon: Calendar, desc: 'Conferences & webinars' },
-    { label: 'Careers', href: '/careers', icon: Briefcase, desc: 'Join our team' },
+    { label: 'Case Studies', href: '/case-studies', icon: Briefcase, desc: 'Success stories' },
+    { label: 'Events', href: '/events', icon: Calendar, desc: 'Conferences & meetups' },
     { label: 'Partners', href: '/partners', icon: Handshake, desc: 'Strategic partnerships' },
     { label: 'FAQ', href: '/faq', icon: HelpCircle, desc: 'Common questions' },
 ];
