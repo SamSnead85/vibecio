@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Sun, Moon, Search, BookOpen, Users, Zap, ChevronDown, Mic, Calendar, Briefcase, HelpCircle, Handshake, BarChart3 } from 'lucide-react';
+import { Menu, X, Sun, Moon, Search, BookOpen, Users, Zap, ChevronDown, Mic, Calendar, Briefcase, BarChart3 } from 'lucide-react';
 
 // Main navigation links
 const mainNavLinks = [
@@ -13,11 +13,12 @@ const mainNavLinks = [
 const moreLinks = [
     { label: 'Podcast', href: '/podcast', icon: Mic, desc: 'Weekly conversations with CIOs' },
     { label: 'Webinars', href: '/webinars', icon: Calendar, desc: 'Live expert sessions' },
-    { label: 'Research', href: '/research', icon: BarChart3, desc: 'Reports & benchmarks' },
+    { label: 'Research', href: '/research', icon: BarChart3, desc: 'Reports & analysis' },
+    { label: 'Benchmarks', href: '/benchmarks', icon: BarChart3, desc: 'Industry data & stats' },
+    { label: 'Topics', href: '/topics', icon: BookOpen, desc: 'Explore by topic' },
+    { label: 'Glossary', href: '/glossary', icon: BookOpen, desc: 'Tech terminology' },
     { label: 'Case Studies', href: '/case-studies', icon: Briefcase, desc: 'Success stories' },
-    { label: 'Events', href: '/events', icon: Calendar, desc: 'Conferences & meetups' },
-    { label: 'Partners', href: '/partners', icon: Handshake, desc: 'Strategic partnerships' },
-    { label: 'FAQ', href: '/faq', icon: HelpCircle, desc: 'Common questions' },
+    { label: 'Contributors', href: '/contributors', icon: Users, desc: 'Expert writers' },
 ];
 
 // Mobile-only additional links
