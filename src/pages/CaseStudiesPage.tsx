@@ -93,8 +93,81 @@ const caseStudies: CaseStudy[] = [
         challenge: 'Aging equipment and lack of real-time production visibility',
         solution: 'IoT sensor network with predictive maintenance AI',
         featured: false
+    },
+    {
+        id: 'insurance-innovator',
+        company: 'National Insurance Group',
+        industry: 'Insurance',
+        quote: "VibeCIO's AI governance frameworks helped us navigate complex regulatory requirements while deploying claims automation that transformed our customer experience.",
+        author: {
+            name: 'Amanda Foster',
+            title: 'Chief Digital Officer'
+        },
+        metrics: [
+            { label: 'Claims Processing', value: '-85%' },
+            { label: 'Customer Satisfaction', value: '+32%' },
+            { label: 'Fraud Prevention', value: '$420M' }
+        ],
+        challenge: 'Manual claims processing creating bottlenecks and customer complaints',
+        solution: 'Agentic AI claims automation with human oversight',
+        featured: true
+    },
+    {
+        id: 'energy-utility',
+        company: 'Multi-State Energy Utility',
+        industry: 'Energy & Utilities',
+        quote: "The research on edge AI for critical infrastructure gave us the roadmap to modernize grid operations while maintaining the reliability our customers depend on.",
+        author: {
+            name: 'Thomas Williams',
+            title: 'VP of Technology'
+        },
+        metrics: [
+            { label: 'Outage Prevention', value: '67%' },
+            { label: 'Response Time', value: '-40%' },
+            { label: 'Energy Efficiency', value: '+12%' }
+        ],
+        challenge: 'Aging grid infrastructure and increasing renewable integration complexity',
+        solution: 'AI-powered grid monitoring and predictive maintenance',
+        featured: false
+    },
+    {
+        id: 'logistics-leader',
+        company: 'Global Logistics Corporation',
+        industry: 'Logistics & Supply Chain',
+        quote: "VibeCIO's autonomous systems coverage helped us understand the art of the possible and build executive alignment around our autonomous fleet initiative.",
+        author: {
+            name: 'David Park',
+            title: 'Chief Technology Officer'
+        },
+        metrics: [
+            { label: 'Route Efficiency', value: '+28%' },
+            { label: 'Fuel Costs', value: '-22%' },
+            { label: 'On-Time Delivery', value: '99.2%' }
+        ],
+        challenge: 'Rising fuel costs and driver shortages impacting delivery reliability',
+        solution: 'AI route optimization with autonomous vehicle integration roadmap',
+        featured: false
+    },
+    {
+        id: 'pharma-rd',
+        company: 'Pharmaceutical R&D Leader',
+        industry: 'Life Sciences',
+        quote: "The detailed analysis of AI in drug discovery accelerated our internal capabilities assessment and helped us avoid vendor lock-in mistakes.",
+        author: {
+            name: 'Dr. Elena Schmidt',
+            title: 'SVP of Research Technology'
+        },
+        metrics: [
+            { label: 'Discovery Timeline', value: '-45%' },
+            { label: 'Research Costs', value: '-$180M' },
+            { label: 'Candidate Success', value: '+23%' }
+        ],
+        challenge: 'Lengthy drug discovery cycles and high failure rates in clinical trials',
+        solution: 'AI-accelerated compound screening and trial patient matching',
+        featured: false
     }
 ];
+
 
 export default function CaseStudiesPage() {
     const featuredStudies = caseStudies.filter(s => s.featured);
