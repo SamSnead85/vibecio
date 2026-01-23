@@ -4,6 +4,7 @@ import { articles } from '../data/content';
 import { ArrowLeft, Clock, User, Calendar, Share2, ChevronRight, Sparkles } from 'lucide-react';
 import SEO from '../components/SEO';
 import BookmarkButton from '../components/BookmarkButton';
+import AIArticleAssistant from '../components/AIArticleAssistant';
 
 export default function ArticlePage() {
     const { id } = useParams<{ id: string }>();
@@ -139,7 +140,7 @@ export default function ArticlePage() {
                 )}
 
                 {/* Hero Content */}
-                <div className="relative z-10 w-full pb-16 pt-32">
+                <div className="relative z-10 w-full pb-12 pt-48">
                     <div className="container max-w-5xl mx-auto px-6">
                         {/* Breadcrumb */}
                         <nav className="flex items-center gap-2 text-sm text-[var(--color-zinc-400)] mb-8 animate-fade-in">
@@ -290,6 +291,16 @@ export default function ArticlePage() {
                     Back to Articles
                 </Link>
             </div>
+
+            {/* AI Article Assistant */}
+            <AIArticleAssistant
+                article={{
+                    title: article.title,
+                    subtitle: article.subtitle,
+                    content: article.content,
+                    insights: article.insights
+                }}
+            />
         </article>
     );
 }
