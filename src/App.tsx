@@ -33,6 +33,8 @@ import EventsPage from './pages/EventsPage';
 import AdvertisePage from './pages/AdvertisePage';
 import TermsPage from './pages/TermsPage';
 import AccessibilityPage from './pages/AccessibilityPage';
+import PartnersPage from './pages/PartnersPage';
+import FAQPage from './pages/FAQPage';
 
 // Scroll restoration component
 function ScrollToTop() {
@@ -105,6 +107,8 @@ function AppContent() {
             <Route path="/advertise" element={<AdvertisePage />} />
             <Route path="/terms" element={<TermsPage />} />
             <Route path="/accessibility" element={<AccessibilityPage />} />
+            <Route path="/partners" element={<PartnersPage />} />
+            <Route path="/faq" element={<FAQPage />} />
 
             {/* 404 */}
             <Route path="*" element={<NotFound />} />

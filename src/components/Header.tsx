@@ -1,19 +1,39 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Sun, Moon, Search, BookOpen, Users, Zap, Mail } from 'lucide-react';
+import { Menu, X, Sun, Moon, Search, BookOpen, Users, Zap, ChevronDown, Mic, Calendar, Briefcase, HelpCircle, Handshake, BarChart3 } from 'lucide-react';
 
-const navLinks = [
+// Main navigation links
+const mainNavLinks = [
     { label: 'Home', href: '/', icon: Zap },
     { label: 'Articles', href: '/articles', icon: BookOpen },
     { label: 'Leaders', href: '/leaders', icon: Users },
-    { label: 'Newsletter', href: '/#newsletter', icon: Mail },
+];
+
+// Dropdown menu items
+const moreLinks = [
+    { label: 'Podcast', href: '/podcast', icon: Mic, desc: 'Weekly conversations with CIOs' },
+    { label: 'Research', href: '/research', icon: BarChart3, desc: 'Reports & benchmarks' },
+    { label: 'Events', href: '/events', icon: Calendar, desc: 'Conferences & webinars' },
+    { label: 'Careers', href: '/careers', icon: Briefcase, desc: 'Join our team' },
+    { label: 'Partners', href: '/partners', icon: Handshake, desc: 'Strategic partnerships' },
+    { label: 'FAQ', href: '/faq', icon: HelpCircle, desc: 'Common questions' },
+];
+
+// Mobile-only additional links
+const mobileSecondaryLinks = [
+    { label: 'About', href: '/about' },
+    { label: 'Contact', href: '/contact' },
+    { label: 'Advertise', href: '/advertise' },
+    { label: 'Editorial Team', href: '/team' },
 ];
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isMoreOpen, setIsMoreOpen] = useState(false);
     const [isDarkMode, setIsDarkMode] = useState(true);
     const location = useLocation();
+    const moreDropdownRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -23,22 +43,22 @@ export default function Header() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Close mobile menu on route change
+    // Close mobile menu and dropdown on route change
     useEffect(() => {
         setIsMobileMenuOpen(false);
+        setIsMoreOpen(false);
     }, [location.pathname]);
 
-    // Handle hash links (scroll to element)
-    const handleNavClick = (href: string) => {
-        if (href.startsWith('/#')) {
-            const elementId = href.replace('/#', '');
-            const element = document.getElementById(elementId);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
+    // Close dropdown when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (e: MouseEvent) => {
+            if (moreDropdownRef.current && !moreDropdownRef.current.contains(e.target as Node)) {
+                setIsMoreOpen(false);
             }
-        }
-        setIsMobileMenuOpen(false);
-    };
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
 
     const isActiveLink = (href: string) => {
         if (href === '/') return location.pathname === '/';
@@ -61,34 +81,15 @@ export default function Header() {
 
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center gap-1">
-                        {navLinks.map((link) => {
+                        {mainNavLinks.map((link) => {
                             const Icon = link.icon;
-                            const isHash = link.href.startsWith('/#');
-
-                            if (isHash) {
-                                return (
-                                    <a
-                                        key={link.href}
-                                        href={link.href}
-                                        onClick={(e) => {
-                                            e.preventDefault();
-                                            handleNavClick(link.href);
-                                        }}
-                                        className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-[var(--color-zinc-400)] hover:text-white hover:bg-[var(--color-zinc-800)]/50 transition-all"
-                                    >
-                                        <Icon size={16} />
-                                        {link.label}
-                                    </a>
-                                );
-                            }
-
                             return (
                                 <Link
                                     key={link.href}
                                     to={link.href}
                                     className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${isActiveLink(link.href)
-                                            ? 'text-[var(--color-accent)] bg-[var(--color-accent)]/10'
-                                            : 'text-[var(--color-zinc-400)] hover:text-white hover:bg-[var(--color-zinc-800)]/50'
+                                        ? 'text-[var(--color-accent)] bg-[var(--color-accent)]/10'
+                                        : 'text-[var(--color-zinc-400)] hover:text-white hover:bg-[var(--color-zinc-800)]/50'
                                         }`}
                                 >
                                     <Icon size={16} />
@@ -96,6 +97,58 @@ export default function Header() {
                                 </Link>
                             );
                         })}
+
+                        {/* More Dropdown */}
+                        <div className="relative" ref={moreDropdownRef}>
+                            <button
+                                onClick={() => setIsMoreOpen(!isMoreOpen)}
+                                className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${isMoreOpen
+                                    ? 'text-[var(--color-accent)] bg-[var(--color-accent)]/10'
+                                    : 'text-[var(--color-zinc-400)] hover:text-white hover:bg-[var(--color-zinc-800)]/50'
+                                    }`}
+                            >
+                                More
+                                <ChevronDown size={14} className={`transition-transform ${isMoreOpen ? 'rotate-180' : ''}`} />
+                            </button>
+
+                            {/* Dropdown Menu */}
+                            {isMoreOpen && (
+                                <div className="absolute top-full right-0 mt-2 w-72 bg-[var(--color-zinc-900)] border border-[var(--color-zinc-800)] rounded-xl shadow-2xl overflow-hidden animate-fade-in z-50">
+                                    <div className="py-2">
+                                        {moreLinks.map((link) => {
+                                            const Icon = link.icon;
+                                            return (
+                                                <Link
+                                                    key={link.href}
+                                                    to={link.href}
+                                                    className="flex items-start gap-3 px-4 py-3 hover:bg-[var(--color-zinc-800)]/50 transition-colors group"
+                                                >
+                                                    <div className="w-9 h-9 rounded-lg bg-[var(--color-zinc-800)] group-hover:bg-[var(--color-accent)]/10 flex items-center justify-center flex-shrink-0 transition-colors">
+                                                        <Icon size={16} className="text-[var(--color-zinc-400)] group-hover:text-[var(--color-accent)] transition-colors" />
+                                                    </div>
+                                                    <div>
+                                                        <div className="font-medium text-[var(--color-zinc-200)] group-hover:text-white transition-colors">
+                                                            {link.label}
+                                                        </div>
+                                                        <div className="text-xs text-[var(--color-zinc-500)]">
+                                                            {link.desc}
+                                                        </div>
+                                                    </div>
+                                                </Link>
+                                            );
+                                        })}
+                                    </div>
+                                    <div className="border-t border-[var(--color-zinc-800)] p-3">
+                                        <Link
+                                            to="/advertise"
+                                            className="block text-center text-sm text-[var(--color-accent)] hover:underline"
+                                        >
+                                            Advertise with us →
+                                        </Link>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
                     </nav>
 
                     {/* Desktop Actions */}
@@ -123,11 +176,7 @@ export default function Header() {
 
                         {/* Subscribe CTA */}
                         <Link
-                            to="/#newsletter"
-                            onClick={(e) => {
-                                e.preventDefault();
-                                handleNavClick('/#newsletter');
-                            }}
+                            to="/subscribe"
                             className="px-4 py-2 rounded-lg bg-[var(--color-accent)] text-black font-semibold text-sm hover:bg-[var(--color-accent-hover)] transition-colors"
                         >
                             Subscribe
@@ -154,10 +203,10 @@ export default function Header() {
 
             {/* Mobile Slide-out Menu */}
             <div
-                className={`fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-[var(--color-zinc-900)] border-l border-[var(--color-zinc-800)] z-50 md:hidden transition-transform duration-300 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+                className={`fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-[var(--color-zinc-900)] border-l border-[var(--color-zinc-800)] z-50 md:hidden transition-transform duration-300 overflow-y-auto ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
                     }`}
             >
-                <div className="flex flex-col h-full">
+                <div className="flex flex-col min-h-full">
                     {/* Mobile Menu Header */}
                     <div className="flex items-center justify-between p-6 border-b border-[var(--color-zinc-800)]">
                         <span className="font-display text-xl font-bold tracking-tight">
@@ -171,36 +220,20 @@ export default function Header() {
                         </button>
                     </div>
 
-                    {/* Mobile Navigation */}
-                    <nav className="flex-1 py-4 overflow-y-auto">
-                        {navLinks.map((link) => {
+                    {/* Main Navigation */}
+                    <nav className="py-4">
+                        <div className="px-4 py-2 text-xs font-bold uppercase tracking-widest text-[var(--color-zinc-600)]">
+                            Main
+                        </div>
+                        {mainNavLinks.map((link) => {
                             const Icon = link.icon;
-                            const isHash = link.href.startsWith('/#');
-
-                            if (isHash) {
-                                return (
-                                    <a
-                                        key={link.href}
-                                        href={link.href}
-                                        onClick={(e) => {
-                                            e.preventDefault();
-                                            handleNavClick(link.href);
-                                        }}
-                                        className="flex items-center gap-4 px-6 py-4 text-[var(--color-zinc-300)] hover:text-white hover:bg-[var(--color-zinc-800)]/50 transition-colors"
-                                    >
-                                        <Icon size={20} />
-                                        <span className="font-medium">{link.label}</span>
-                                    </a>
-                                );
-                            }
-
                             return (
                                 <Link
                                     key={link.href}
                                     to={link.href}
                                     className={`flex items-center gap-4 px-6 py-4 transition-colors ${isActiveLink(link.href)
-                                            ? 'text-[var(--color-accent)] bg-[var(--color-accent)]/10'
-                                            : 'text-[var(--color-zinc-300)] hover:text-white hover:bg-[var(--color-zinc-800)]/50'
+                                        ? 'text-[var(--color-accent)] bg-[var(--color-accent)]/10'
+                                        : 'text-[var(--color-zinc-300)] hover:text-white hover:bg-[var(--color-zinc-800)]/50'
                                         }`}
                                 >
                                     <Icon size={20} />
@@ -208,10 +241,42 @@ export default function Header() {
                                 </Link>
                             );
                         })}
+
+                        {/* More Links */}
+                        <div className="px-4 py-2 mt-4 text-xs font-bold uppercase tracking-widest text-[var(--color-zinc-600)]">
+                            More
+                        </div>
+                        {moreLinks.map((link) => {
+                            const Icon = link.icon;
+                            return (
+                                <Link
+                                    key={link.href}
+                                    to={link.href}
+                                    className="flex items-center gap-4 px-6 py-3 text-[var(--color-zinc-300)] hover:text-white hover:bg-[var(--color-zinc-800)]/50 transition-colors"
+                                >
+                                    <Icon size={18} />
+                                    <span className="font-medium">{link.label}</span>
+                                </Link>
+                            );
+                        })}
+
+                        {/* Secondary Links */}
+                        <div className="px-4 py-2 mt-4 text-xs font-bold uppercase tracking-widest text-[var(--color-zinc-600)]">
+                            Company
+                        </div>
+                        {mobileSecondaryLinks.map((link) => (
+                            <Link
+                                key={link.href}
+                                to={link.href}
+                                className="flex items-center gap-4 px-6 py-3 text-[var(--color-zinc-400)] hover:text-white hover:bg-[var(--color-zinc-800)]/50 transition-colors"
+                            >
+                                <span>{link.label}</span>
+                            </Link>
+                        ))}
                     </nav>
 
                     {/* Mobile Menu Footer */}
-                    <div className="p-6 border-t border-[var(--color-zinc-800)] space-y-4">
+                    <div className="mt-auto p-6 border-t border-[var(--color-zinc-800)] space-y-4">
                         {/* Theme Toggle */}
                         <button
                             onClick={() => setIsDarkMode(!isDarkMode)}
@@ -222,16 +287,12 @@ export default function Header() {
                         </button>
 
                         {/* Subscribe CTA */}
-                        <a
-                            href="/#newsletter"
-                            onClick={(e) => {
-                                e.preventDefault();
-                                handleNavClick('/#newsletter');
-                            }}
+                        <Link
+                            to="/subscribe"
                             className="block w-full px-4 py-3 rounded-lg bg-[var(--color-accent)] text-black text-center font-semibold hover:bg-[var(--color-accent-hover)] transition-colors"
                         >
                             Subscribe to Newsletter
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
