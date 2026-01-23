@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import { X, Clock, Share2, BookOpen, ChevronUp, Quote, Sparkles, TrendingUp, ArrowLeft } from 'lucide-react';
+import { X, Clock, Share2, BookOpen, ChevronUp, Quote, Sparkles, TrendingUp, ArrowLeft, ArrowRight, Bookmark } from 'lucide-react';
 import type { Article } from '../types';
+import { articles } from '../data/content';
 
 interface ArticleModalProps {
     article: Article | null;
@@ -55,7 +56,18 @@ export default function ArticleModal({ article, isOpen, onClose }: ArticleModalP
         contentRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
+    // Get related articles based on category and keywords
+    const getRelatedArticles = (): Article[] => {
+        if (!article) return [];
+        return articles
+            .filter(a => a.id !== article.id) // Exclude current article
+            .filter(a => a.category === article.category) // Same category
+            .slice(0, 3); // Max 3 articles
+    };
+
     if (!isOpen || !article) return null;
+
+    const relatedArticles = getRelatedArticles();
 
     return (
         <div
@@ -345,6 +357,58 @@ export default function ArticleModal({ article, isOpen, onClose }: ArticleModalP
                                                     <div className="text-sm text-[var(--color-zinc-500)]">VibeCIO Editorial</div>
                                                 </div>
                                             </div>
+                                        </div>
+
+                                        {/* Related Articles */}
+                                        {relatedArticles.length > 0 && (
+                                            <div className="glass-premium rounded-2xl p-6">
+                                                <div className="flex items-center gap-3 mb-5">
+                                                    <div className="p-2.5 bg-gradient-to-br from-[var(--color-accent)]/20 to-[var(--color-accent)]/5 rounded-xl">
+                                                        <TrendingUp size={18} className="text-[var(--color-accent)]" />
+                                                    </div>
+                                                    <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-[var(--color-accent)]">
+                                                        Related Articles
+                                                    </h3>
+                                                </div>
+                                                <div className="space-y-4">
+                                                    {relatedArticles.map((relatedArticle) => (
+                                                        <div
+                                                            key={relatedArticle.id}
+                                                            className="p-4 rounded-xl bg-[var(--color-zinc-800)]/30 border border-[var(--color-zinc-700)]/30 hover:border-[var(--color-accent)]/30 hover:bg-[var(--color-zinc-800)]/50 transition-all cursor-pointer group"
+                                                        >
+                                                            <div className="flex items-start gap-3">
+                                                                {relatedArticle.image && (
+                                                                    <div className="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0">
+                                                                        <img
+                                                                            src={relatedArticle.image}
+                                                                            alt={relatedArticle.title}
+                                                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                                                        />
+                                                                    </div>
+                                                                )}
+                                                                <div className="flex-1 min-w-0">
+                                                                    <h4 className="text-sm font-semibold text-[var(--color-zinc-200)] group-hover:text-[var(--color-accent)] transition-colors line-clamp-2 leading-snug">
+                                                                        {relatedArticle.title}
+                                                                    </h4>
+                                                                    <div className="flex items-center gap-2 mt-1.5 text-xs text-[var(--color-zinc-500)]">
+                                                                        <Clock size={10} />
+                                                                        <span>{relatedArticle.readTime} min</span>
+                                                                    </div>
+                                                                </div>
+                                                                <ArrowRight size={14} className="flex-shrink-0 text-[var(--color-zinc-600)] group-hover:text-[var(--color-accent)] group-hover:translate-x-1 transition-all mt-1" />
+                                                            </div>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        )}
+
+                                        {/* Bookmark Article CTA */}
+                                        <div className="glass-premium rounded-2xl p-5">
+                                            <button className="w-full flex items-center justify-center gap-2 py-3 bg-[var(--color-zinc-800)] text-[var(--color-zinc-200)] font-medium rounded-xl hover:bg-[var(--color-zinc-700)] hover:text-[var(--color-accent)] transition-colors border border-[var(--color-zinc-700)]">
+                                                <Bookmark size={16} />
+                                                Save to Reading List
+                                            </button>
                                         </div>
 
                                         {/* Newsletter CTA */}
