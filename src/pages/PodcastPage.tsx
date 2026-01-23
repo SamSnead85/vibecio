@@ -63,8 +63,69 @@ const episodes: Podcast[] = [
         date: '2025-12-16',
         description: 'Exploring the shift from traditional development to AI orchestration and what it means for technology talent.',
         image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop'
+    },
+    {
+        id: 'ep-19',
+        title: 'AI Security: Offensive and Defensive Strategies',
+        guest: 'Dr. Sarah Blackwell',
+        guestTitle: 'CISO, Fortress Financial',
+        duration: 51,
+        date: '2025-12-09',
+        description: 'A deep dive into AI-powered cyberattacks and how security teams are building defensive AI capabilities.',
+        image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop'
+    },
+    {
+        id: 'ep-18',
+        title: 'Quantum Computing Meets Enterprise AI',
+        guest: 'Dr. John Martinis',
+        guestTitle: 'Former Head of Quantum AI, Google',
+        duration: 62,
+        date: '2025-12-02',
+        description: 'Understanding the intersection of quantum computing and AI, and when enterprises should start preparing.',
+        image: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?w=400&h=400&fit=crop'
+    },
+    {
+        id: 'ep-17',
+        title: 'Responsible AI Governance at Scale',
+        guest: 'Dr. Timnit Gebru',
+        guestTitle: 'Founder, DAIR Institute',
+        duration: 57,
+        date: '2025-11-25',
+        description: 'Building AI governance frameworks that balance innovation with ethics and accountability.',
+        image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop'
+    },
+    {
+        id: 'ep-16',
+        title: 'Edge AI in Manufacturing',
+        guest: 'Thomas Mueller',
+        guestTitle: 'VP Technology, Continental Manufacturing',
+        duration: 44,
+        date: '2025-11-18',
+        description: 'Real-world deployment of AI at the manufacturing edge, from predictive maintenance to quality control.',
+        image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop'
+    },
+    {
+        id: 'ep-15',
+        title: 'LLMs in Production: Lessons Learned',
+        guest: 'Dr. Amanda Richardson',
+        guestTitle: 'VP of AI Engineering, Tech Giant',
+        duration: 49,
+        date: '2025-11-11',
+        description: 'Technical deep dive into running large language models at enterprise scale, including cost optimization and reliability.',
+        image: 'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&h=400&fit=crop'
+    },
+    {
+        id: 'ep-14',
+        title: 'The Data Foundation for AI Success',
+        guest: 'Jennifer Wu',
+        guestTitle: 'CDO, Pacific Bank Holdings',
+        duration: 46,
+        date: '2025-11-04',
+        description: 'Why data architecture is the critical foundation for AI success, and how to build it right.',
+        image: 'https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=400&h=400&fit=crop'
     }
 ];
+
 
 export default function PodcastPage() {
     const [playingEpisode, setPlayingEpisode] = useState<string | null>(null);
