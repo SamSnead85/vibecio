@@ -20,14 +20,14 @@ const footerLinks = {
         { label: 'About', href: '/about' },
         { label: 'Editorial Team', href: '/team' },
         { label: 'Careers', href: '/careers' },
-        { label: 'Events', href: '/events' },
+        { label: 'Press', href: '/press' },
         { label: 'Contact', href: '/contact' },
     ],
     resources: [
-        { label: 'Case Studies', href: '/case-studies' },
+        { label: 'Resources', href: '/resources' },
+        { label: 'Benchmarks', href: '/benchmarks' },
         { label: 'Advertise', href: '/advertise' },
         { label: 'Partners', href: '/partners' },
-        { label: 'Newsletter', href: '/subscribe' },
         { label: 'FAQ', href: '/faq' },
     ],
 };
