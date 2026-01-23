@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Sun, Moon, Search, BookOpen, Users, Zap, ChevronDown, Mic, Calendar, Briefcase, BarChart3 } from 'lucide-react';
+import { Menu, X, Sun, Moon, Search, BookOpen, Users, Zap, ChevronDown, Mic, Calendar, Briefcase, BarChart3, Award } from 'lucide-react';
 
 // Main navigation links
 const mainNavLinks = [
@@ -19,6 +19,8 @@ const moreLinks = [
     { label: 'Glossary', href: '/glossary', icon: BookOpen, desc: 'Tech terminology' },
     { label: 'Case Studies', href: '/case-studies', icon: Briefcase, desc: 'Success stories' },
     { label: 'Contributors', href: '/contributors', icon: Users, desc: 'Expert writers' },
+    { label: 'Awards', href: '/awards', icon: Award, desc: 'CIO Excellence Awards' },
+    { label: 'Community', href: '/community', icon: Users, desc: 'Join the network' },
 ];
 
 // Mobile-only additional links

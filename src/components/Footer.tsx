@@ -15,6 +15,8 @@ const footerLinks = {
         { label: 'Contributors', href: '/contributors' },
         { label: 'Case Studies', href: '/case-studies' },
         { label: 'Events', href: '/events' },
+        { label: 'Awards', href: '/awards' },
+        { label: 'Community', href: '/community' },
     ],
     company: [
         { label: 'About', href: '/about' },

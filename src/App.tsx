@@ -43,6 +43,8 @@ import GlossaryPage from './pages/GlossaryPage';
 import BenchmarksPage from './pages/BenchmarksPage';
 import ResourcesPage from './pages/ResourcesPage';
 import PressPage from './pages/PressPage';
+import AwardsPage from './pages/AwardsPage';
+import CommunityPage from './pages/CommunityPage';
 
 // Scroll restoration component
 function ScrollToTop() {
@@ -125,6 +127,8 @@ function AppContent() {
             <Route path="/benchmarks" element={<BenchmarksPage />} />
             <Route path="/resources" element={<ResourcesPage />} />
             <Route path="/press" element={<PressPage />} />
+            <Route path="/awards" element={<AwardsPage />} />
+            <Route path="/community" element={<CommunityPage />} />
 
             {/* 404 */}
             <Route path="*" element={<NotFound />} />
