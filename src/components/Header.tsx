@@ -14,6 +14,7 @@ const moreLinks = [
     { label: 'AI Trends', href: '/ai-trends', icon: BarChart3, desc: 'AI intelligence hub' },
     { label: 'Industries', href: '/industries', icon: Briefcase, desc: 'Sector insights' },
     { label: 'Reports', href: '/reports', icon: BookOpen, desc: 'Research library' },
+    { label: 'Tools', href: '/tools', icon: BarChart3, desc: 'Calculators & assessments' },
     { label: 'Podcast', href: '/podcast', icon: Mic, desc: 'Weekly conversations with CIOs' },
     { label: 'Webinars', href: '/webinars', icon: Calendar, desc: 'Live expert sessions' },
     { label: 'Research', href: '/research', icon: BarChart3, desc: 'Reports & analysis' },
