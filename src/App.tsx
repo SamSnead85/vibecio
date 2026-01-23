@@ -35,6 +35,8 @@ import TermsPage from './pages/TermsPage';
 import AccessibilityPage from './pages/AccessibilityPage';
 import PartnersPage from './pages/PartnersPage';
 import FAQPage from './pages/FAQPage';
+import WebinarsPage from './pages/WebinarsPage';
+import CaseStudiesPage from './pages/CaseStudiesPage';
 
 // Scroll restoration component
 function ScrollToTop() {
@@ -109,6 +111,8 @@ function AppContent() {
             <Route path="/accessibility" element={<AccessibilityPage />} />
             <Route path="/partners" element={<PartnersPage />} />
             <Route path="/faq" element={<FAQPage />} />
+            <Route path="/webinars" element={<WebinarsPage />} />
+            <Route path="/case-studies" element={<CaseStudiesPage />} />
 
             {/* 404 */}
             <Route path="*" element={<NotFound />} />
