@@ -118,7 +118,7 @@ export default function ArticlePage() {
             />
 
             {/* Full-Bleed Hero Section */}
-            <header className="relative min-h-[70vh] flex items-end overflow-hidden">
+            <header className="relative min-h-[85vh] flex items-end overflow-hidden">
                 {/* Hero Image */}
                 {article.image && (
                     <div className="absolute inset-0">
@@ -126,7 +126,7 @@ export default function ArticlePage() {
                             src={article.image}
                             alt={article.title}
                             className="w-full h-full object-cover"
-                            style={{ objectPosition: 'center 20%' }}
+                            style={{ objectPosition: 'center top' }}
                         />
                         {/* Gradient Overlay */}
                         <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-zinc-950)] via-[var(--color-zinc-950)]/70 to-transparent" />
@@ -140,7 +140,7 @@ export default function ArticlePage() {
                 )}
 
                 {/* Hero Content */}
-                <div className="relative z-10 w-full pb-12 pt-48">
+                <div className="relative z-10 w-full pb-12 pt-96">
                     <div className="container max-w-5xl mx-auto px-6">
                         {/* Breadcrumb */}
                         <nav className="flex items-center gap-2 text-sm text-[var(--color-zinc-400)] mb-8 animate-fade-in">
@@ -171,9 +171,17 @@ export default function ArticlePage() {
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
                             <div className="flex flex-wrap items-center gap-6 text-sm text-[var(--color-zinc-400)]">
                                 <div className="flex items-center gap-2">
-                                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-accent-hover)] flex items-center justify-center">
-                                        <User size={14} className="text-white" />
-                                    </div>
+                                    {article.authorImage ? (
+                                        <img
+                                            src={article.authorImage}
+                                            alt={article.author}
+                                            className="w-10 h-10 rounded-full object-cover border-2 border-[var(--color-accent)]/30"
+                                        />
+                                    ) : (
+                                        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-accent-hover)] flex items-center justify-center">
+                                            <User size={14} className="text-white" />
+                                        </div>
+                                    )}
                                     <span className="text-[var(--color-zinc-200)]">{article.author}</span>
                                 </div>
                                 <div className="flex items-center gap-2">

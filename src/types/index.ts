@@ -51,6 +51,7 @@ export interface Article {
     insights: string[];
     featured?: boolean;
     image?: string;
+    authorImage?: string;
     tags?: string[];
     relatedArticles?: string[];
 }
