@@ -117,30 +117,28 @@ export default function ArticlePage() {
                 style={{ width: `${scrollProgress}%` }}
             />
 
-            {/* Full-Bleed Hero Section */}
-            <header className="relative min-h-[85vh] flex items-end overflow-hidden">
-                {/* Hero Image */}
+            {/* Hero Section - Image Above, Content Below */}
+            <header className="relative pt-20">
+                {/* Hero Image - Prominent Display */}
                 {article.image && (
-                    <div className="absolute inset-0">
+                    <div className="relative w-full h-[50vh] md:h-[60vh] lg:h-[70vh] overflow-hidden">
                         <img
                             src={article.image}
                             alt={article.title}
-                            className="w-full h-full object-cover"
-                            style={{ objectPosition: 'center top' }}
+                            className="w-full h-full object-cover object-top"
                         />
-                        {/* Gradient Overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-zinc-950)] via-[var(--color-zinc-950)]/70 to-transparent" />
-                        <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-zinc-950)]/50 to-transparent" />
+                        {/* Subtle bottom gradient for transition */}
+                        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[var(--color-zinc-950)] to-transparent" />
                     </div>
                 )}
 
                 {/* Fallback gradient if no image */}
                 {!article.image && (
-                    <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-zinc-900)] via-[var(--color-zinc-800)] to-[var(--color-zinc-950)]" />
+                    <div className="w-full h-[40vh] bg-gradient-to-br from-[var(--color-zinc-900)] via-[var(--color-zinc-800)] to-[var(--color-zinc-950)]" />
                 )}
 
-                {/* Hero Content */}
-                <div className="relative z-10 w-full pb-12 pt-96">
+                {/* Hero Content - Below Image */}
+                <div className="relative z-10 w-full bg-[var(--color-zinc-950)] py-12">
                     <div className="container max-w-5xl mx-auto px-6">
                         {/* Breadcrumb */}
                         <nav className="flex items-center gap-2 text-sm text-[var(--color-zinc-400)] mb-8 animate-fade-in">
