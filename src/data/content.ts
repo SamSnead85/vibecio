@@ -1116,10 +1116,17 @@ export function getTodaysFeaturedArticle(): Article {
 }
 
 // ============================================================================
-// HELPER: Get article by category
+// HELPER: Get article by category (excludes today's featured article)
 // ============================================================================
 
-export function getArticlesByCategory(category: string): Article[] {
-    if (category === 'all') return articles;
-    return articles.filter(a => a.category === category);
+export function getArticlesByCategory(category: string, excludeTodaysFeatured: boolean = true): Article[] {
+    const todaysFeatured = getTodaysFeaturedArticle();
+    let result = category === 'all' ? articles : articles.filter(a => a.category === category);
+
+    // Exclude today's featured article to prevent duplication with the Daily Feature section
+    if (excludeTodaysFeatured && todaysFeatured) {
+        result = result.filter(a => a.id !== todaysFeatured.id);
+    }
+
+    return result;
 }

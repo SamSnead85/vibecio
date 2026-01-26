@@ -50,6 +50,21 @@ import ReportsPage from './pages/ReportsPage';
 import IndustriesPage from './pages/IndustriesPage';
 import ToolsPage from './pages/ToolsPage';
 
+// Phase 1001-1100: New Enhanced Pages
+import AnalyticsDashboard from './pages/AnalyticsDashboard';
+import MobileExperience from './pages/MobileExperience';
+import AccessibilityPanel from './pages/AccessibilityPanel';
+import WhitepapersPage from './pages/WhitepapersPage';
+import ContentCreator from './pages/ContentCreator';
+import VideoHub from './pages/VideoHub';
+import Leaderboard from './pages/Leaderboard';
+import ReadingListManager from './pages/ReadingListManager';
+import NewsletterPreferences from './pages/NewsletterPreferences';
+import JobBoard from './pages/JobBoard';
+
+// Phase 1021-1030: AI Chatbot Component
+import AIChatbot from './components/AIChatbot';
+
 // Scroll restoration component
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -138,6 +153,18 @@ function AppContent() {
             <Route path="/industries" element={<IndustriesPage />} />
             <Route path="/tools" element={<ToolsPage />} />
 
+            {/* Phase 1001-1100: New Enhanced Routes */}
+            <Route path="/analytics" element={<AnalyticsDashboard />} />
+            <Route path="/mobile" element={<MobileExperience />} />
+            <Route path="/accessibility-settings" element={<AccessibilityPanel />} />
+            <Route path="/whitepapers" element={<WhitepapersPage />} />
+            <Route path="/create" element={<ContentCreator />} />
+            <Route path="/videos" element={<VideoHub />} />
+            <Route path="/leaderboard" element={<Leaderboard />} />
+            <Route path="/reading-lists" element={<ReadingListManager />} />
+            <Route path="/newsletter" element={<NewsletterPreferences />} />
+            <Route path="/jobs" element={<JobBoard />} />
+
             {/* 404 */}
             <Route path="*" element={<NotFound />} />
           </Routes>
@@ -145,6 +172,9 @@ function AppContent() {
 
         <Footer />
       </div>
+
+      {/* AI Chatbot - Phase 1021-1030 */}
+      <AIChatbot />
 
       {/* Search Modal */}
       <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
