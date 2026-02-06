@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { articles } from '../data/content';
-import { ArrowLeft, Clock, User, Calendar, Share2, ChevronRight, Sparkles, BookOpen, TrendingUp, Quote, Zap, Play, Bookmark, Volume2, Eye } from 'lucide-react';
+import { ArrowLeft, Clock, Share2, ChevronRight, Sparkles, BookOpen, TrendingUp, Quote, Zap, Play, Volume2, Eye } from 'lucide-react';
 import SEO from '../components/SEO';
 import BookmarkButton from '../components/BookmarkButton';
 import AIArticleAssistant from '../components/AIArticleAssistant';
