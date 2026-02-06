@@ -268,12 +268,12 @@ export default function ArticleModal({ article, isOpen, onClose }: ArticleModalP
                         <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12 py-16 lg:py-24">
                             <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
                                 {/* Main Article Content */}
-                                <article className="lg:col-span-8">
+                                <article className="lg:col-span-8 max-w-[680px] lg:max-w-none">
                                     {/* Lead Paragraph - Drop Cap */}
                                     {article.content[0] && (
                                         <div className="relative mb-12">
                                             <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-[var(--color-accent)] via-[var(--color-accent)]/30 to-transparent rounded-full" />
-                                            <p className="text-xl md:text-2xl text-[var(--color-zinc-200)] leading-[1.8] pl-8 first-letter:text-7xl first-letter:font-display first-letter:font-bold first-letter:text-[var(--color-accent)] first-letter:float-left first-letter:mr-4 first-letter:mt-1 first-letter:leading-none first-letter:drop-shadow-[0_0_20px_rgba(201,165,92,0.3)]">
+                                            <p className="text-2xl text-white/92 leading-[1.6] pl-8 first-letter:text-[4.5rem] first-letter:font-display first-letter:font-bold first-letter:text-[var(--color-accent)] first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:leading-[0.85] first-letter:drop-shadow-[0_0_20px_rgba(201,165,92,0.3)]">
                                                 {article.content[0]}
                                             </p>
                                         </div>
@@ -293,20 +293,37 @@ export default function ArticleModal({ article, isOpen, onClose }: ArticleModalP
                                     {/* Content Paragraphs with Premium Styling */}
                                     <div className="space-y-8">
                                         {article.content.slice(1).map((paragraph, index) => {
+                                            // Detect section headers (markdown bold format: **Header**)
+                                            const headerMatch = paragraph.match(/^\*\*(.+?)\*\*$/);
+
+                                            if (headerMatch) {
+                                                return (
+                                                    <div key={index} className="mt-16 first:mt-0">
+                                                        <h2 className="text-[28px] font-bold text-white/95 leading-tight mb-6 tracking-tight">
+                                                            {headerMatch[1]}
+                                                        </h2>
+                                                        <div className="flex items-center gap-3 mb-8">
+                                                            <div className="w-12 h-px bg-gradient-to-r from-[var(--color-accent)] to-transparent" />
+                                                            <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)]" />
+                                                        </div>
+                                                    </div>
+                                                );
+                                            }
+
                                             // Add pull quote after 2nd paragraph
                                             if (index === 1 && article.content.length > 3) {
                                                 return (
                                                     <div key={index}>
-                                                        <p className="text-lg text-[var(--color-zinc-300)] leading-[1.9]">
+                                                        <p className="text-xl text-white/92 leading-[1.7] mb-8">
                                                             {paragraph}
                                                         </p>
 
-                                                        {/* Premium Pull Quote - Netflix Aesthetic */}
-                                                        <blockquote className="my-16 relative">
+                                                        {/* Premium Pull Quote - Editorial Style */}
+                                                        <blockquote className="my-20 relative">
                                                             <div className="absolute -inset-4 bg-gradient-to-br from-[var(--color-accent)]/5 via-transparent to-[var(--color-accent)]/3 rounded-2xl" />
                                                             <div className="relative pl-8 border-l-4 border-[var(--color-accent)]">
                                                                 <Quote className="absolute -left-6 -top-2 w-12 h-12 text-[var(--color-accent)]/20" />
-                                                                <p className="text-2xl md:text-3xl font-display italic text-[var(--color-zinc-100)] leading-[1.5]">
+                                                                <p className="text-2xl md:text-3xl font-display italic text-white/95 leading-[1.5]">
                                                                     "{article.insights[0]}"
                                                                 </p>
                                                             </div>
@@ -319,23 +336,16 @@ export default function ArticleModal({ article, isOpen, onClose }: ArticleModalP
                                             if (index === 3 && article.content.length > 5) {
                                                 return (
                                                     <div key={index}>
-                                                        <p className="text-lg text-[var(--color-zinc-300)] leading-[1.9]">
+                                                        <p className="text-xl text-white/92 leading-[1.7] mb-8">
                                                             {paragraph}
                                                         </p>
 
-                                                        {/* Premium Insight Card - Technology Infused */}
-                                                        <div className="my-16 relative group">
+                                                        {/* Premium Insight Card - Simplified */}
+                                                        <div className="my-20 relative group">
                                                             <div className="absolute -inset-1 bg-gradient-to-r from-[var(--color-accent)]/20 via-[var(--color-accent)]/10 to-[var(--color-accent)]/20 rounded-2xl blur-xl opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
-                                                            <div className="relative p-8 md:p-10 bg-gradient-to-br from-[var(--color-zinc-900)] via-[var(--color-zinc-900)]/95 to-[var(--color-zinc-950)] rounded-2xl border border-[var(--color-accent)]/20 overflow-hidden">
-                                                                {/* Tech Pattern Background */}
-                                                                <div className="absolute inset-0 opacity-5">
-                                                                    <div className="absolute top-0 right-0 w-64 h-64 tech-pattern bg-repeat" />
-                                                                </div>
-                                                                <div className="absolute top-0 right-0 w-48 h-48 bg-[var(--color-accent)]/5 rounded-full blur-3xl" />
-                                                                <div className="absolute bottom-0 left-0 w-32 h-32 bg-[var(--color-accent)]/3 rounded-full blur-2xl" />
-
-                                                                <div className="flex items-start gap-5 relative">
-                                                                    <div className="flex-shrink-0 p-4 bg-gradient-to-br from-[var(--color-accent)]/20 to-[var(--color-accent)]/5 rounded-xl border border-[var(--color-accent)]/20 shadow-lg shadow-[var(--color-accent)]/10">
+                                                            <div className="relative p-8 md:p-10 bg-gradient-to-br from-[var(--color-zinc-900)] via-[var(--color-zinc-900)]/95 to-[var(--color-zinc-950)] rounded-2xl border border-[var(--color-accent)]/20">
+                                                                <div className="flex items-start gap-5">
+                                                                    <div className="flex-shrink-0 p-4 bg-gradient-to-br from-[var(--color-accent)]/20 to-[var(--color-accent)]/5 rounded-xl border border-[var(--color-accent)]/20">
                                                                         <TrendingUp className="w-7 h-7 text-[var(--color-accent)]" />
                                                                     </div>
                                                                     <div>
@@ -343,7 +353,7 @@ export default function ArticleModal({ article, isOpen, onClose }: ArticleModalP
                                                                             <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">Key Insight</h4>
                                                                             <div className="w-8 h-px bg-[var(--color-accent)]/40" />
                                                                         </div>
-                                                                        <p className="text-xl text-[var(--color-zinc-100)] font-medium leading-relaxed">
+                                                                        <p className="text-xl text-white/92 font-medium leading-relaxed">
                                                                             {article.insights[1] || article.insights[0]}
                                                                         </p>
                                                                     </div>
@@ -355,7 +365,7 @@ export default function ArticleModal({ article, isOpen, onClose }: ArticleModalP
                                             }
 
                                             return (
-                                                <p key={index} className="text-lg text-[var(--color-zinc-300)] leading-[1.9]">
+                                                <p key={index} className="text-xl text-white/92 leading-[1.7] mb-8">
                                                     {paragraph}
                                                 </p>
                                             );
