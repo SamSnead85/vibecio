@@ -169,24 +169,24 @@ export default function ArticlePage() {
             {/* ======================================
                 CINEMATIC HERO SECTION
             ====================================== */}
-            <header className="relative h-[85vh] min-h-[600px] max-h-[900px] overflow-hidden">
+            <header className="relative h-[85vh] min-h-[600px] max-h-[900px] overflow-hidden bg-[var(--color-zinc-950)]">
                 {/* Full-Bleed Background Image with Ken Burns Effect */}
-                <div className={`absolute inset-0 transition-all duration-[2s] ease-out ${isLoaded ? 'scale-100 opacity-100' : 'scale-110 opacity-0'}`}>
+                <div className={`absolute inset-0 transition-all duration-[2s] ease-out ${isLoaded ? 'scale-100 opacity-100' : 'scale-105 opacity-0'}`}>
                     {article.image ? (
                         <img
                             src={article.image}
                             alt={article.title}
-                            className="absolute inset-0 w-full h-full object-cover object-top"
+                            className="absolute inset-0 w-full h-full object-contain object-center"
                         />
                     ) : (
                         <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-zinc-900)] via-[var(--color-zinc-800)] to-[var(--color-zinc-950)]" />
                     )}
                 </div>
 
-                {/* Cinematic Overlay System - Netflix Style */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-zinc-950)] via-[var(--color-zinc-950)]/60 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-zinc-950)]/80 via-transparent to-[var(--color-zinc-950)]/30" />
-                <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-zinc-950)]/80 via-transparent to-transparent opacity-90" />
+                {/* Cinematic Overlay System - Stronger for better text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-zinc-950)] via-[var(--color-zinc-950)]/80 to-[var(--color-zinc-950)]/30" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-zinc-950)]/90 via-[var(--color-zinc-950)]/40 to-[var(--color-zinc-950)]/60" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-zinc-950)]/70 via-transparent to-transparent" />
 
                 {/* Animated Vignette */}
                 <div className="absolute inset-0 shadow-[inset_0_0_200px_60px_rgba(10,12,16,0.9)]" />
