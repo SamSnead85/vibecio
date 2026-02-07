@@ -297,7 +297,7 @@ export const articles: Article[] = [
         date: "2026-02-06",
         readTime: 14,
         featured: true,
-        image: "/images/zerog_digital_resistance.png",
+        image: "/images/zerog_digital_sovereignty.png",
         insights: [
             "Over 25,000 documented violations against Palestinian digital content in 2024 alone—systematic algorithmic suppression at scale",
             "ZeroG's 'Sovereign Communities' architecture lets users program their own algorithms, choosing what content rises to the top based on their values—not corporate profit motives",

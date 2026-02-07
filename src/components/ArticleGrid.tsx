@@ -1,11 +1,8 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { BookOpen, Clock, ArrowRight, Layers, Play } from 'lucide-react';
 import { getArticlesByCategory } from '../data/content';
-import type { Article, ArticleCategory } from '../types';
-
-interface ArticleGridProps {
-    onReadArticle: (article: Article) => void;
-}
+import type { ArticleCategory } from '../types';
 
 const categories: { id: ArticleCategory | 'all'; label: string }[] = [
     { id: 'all', label: 'All' },
@@ -23,7 +20,7 @@ const categoryAccents: Record<string, { gradient: string; glow: string }> = {
     insights: { gradient: 'from-amber-500/30 via-amber-600/20 to-transparent', glow: 'rgba(245, 158, 11, 0.3)' },
 };
 
-export default function ArticleGrid({ onReadArticle }: ArticleGridProps) {
+export default function ArticleGrid() {
     const [activeCategory, setActiveCategory] = useState<ArticleCategory | 'all'>('all');
     const filteredArticles = getArticlesByCategory(activeCategory);
 
@@ -68,9 +65,9 @@ export default function ArticleGrid({ onReadArticle }: ArticleGridProps) {
 
                 {/* Featured Article - Cinematic Hero Style */}
                 {filteredArticles.length > 0 && filteredArticles[0].featured && (
-                    <div
-                        className="mb-12 netflix-card featured-cinematic rounded-2xl overflow-hidden cursor-pointer glow-accent group animate-fade-in-up"
-                        onClick={() => onReadArticle(filteredArticles[0])}
+                    <Link
+                        to={`/article/${filteredArticles[0].id}`}
+                        className="block mb-12 netflix-card featured-cinematic rounded-2xl overflow-hidden cursor-pointer glow-accent group animate-fade-in-up"
                     >
                         <div className="grid lg:grid-cols-2">
                             {/* Image - Cinematic Treatment */}
@@ -148,16 +145,16 @@ export default function ArticleGrid({ onReadArticle }: ArticleGridProps) {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 )}
 
                 {/* Articles Grid - Netflix Card Style */}
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {filteredArticles.slice(filteredArticles[0]?.featured ? 1 : 0).map((article, index) => (
-                        <article
+                        <Link
                             key={article.id}
-                            onClick={() => onReadArticle(article)}
-                            className="netflix-card glow-accent rounded-2xl overflow-hidden cursor-pointer stagger-item bg-[var(--color-zinc-900)]/60 backdrop-blur-sm border border-[var(--color-zinc-800)]/50"
+                            to={`/article/${article.id}`}
+                            className="block netflix-card glow-accent rounded-2xl overflow-hidden cursor-pointer stagger-item bg-[var(--color-zinc-900)]/60 backdrop-blur-sm border border-[var(--color-zinc-800)]/50"
                             style={{ animationDelay: `${index * 0.08}s` }}
                         >
                             {/* Article Image */}
@@ -225,7 +222,7 @@ export default function ArticleGrid({ onReadArticle }: ArticleGridProps) {
                                     </div>
                                 </div>
                             </div>
-                        </article>
+                        </Link>
                     ))}
                 </div>
             </div>

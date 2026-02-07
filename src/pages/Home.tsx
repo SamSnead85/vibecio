@@ -8,14 +8,12 @@ import TransformationSpotlight from '../components/TransformationSpotlight';
 import Newsletter from '../components/Newsletter';
 import CoverStoryModal from '../components/CoverStoryModal';
 import LeaderModal from '../components/LeaderModal';
-import ArticleModal from '../components/ArticleModal';
 import { coverStory, leaders, transformationSpotlight } from '../data/content';
-import type { Leader, Article } from '../types';
+import type { Leader } from '../types';
 
 export default function Home() {
     const [isCoverStoryOpen, setIsCoverStoryOpen] = useState(false);
     const [selectedLeader, setSelectedLeader] = useState<Leader | null>(null);
-    const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
 
     return (
         <>
@@ -27,10 +25,10 @@ export default function Home() {
             </div>
 
             {/* Today's Featured Article */}
-            <DailyFeature onReadArticle={(article) => setSelectedArticle(article)} />
+            <DailyFeature />
 
             {/* Deep Dive Articles Grid - Primary Content */}
-            <ArticleGrid onReadArticle={(article) => setSelectedArticle(article)} />
+            <ArticleGrid />
 
             {/* Featured CIO Leaders */}
             <CIOLeaderboard
@@ -53,12 +51,6 @@ export default function Home() {
                 leader={selectedLeader}
                 isOpen={selectedLeader !== null}
                 onClose={() => setSelectedLeader(null)}
-            />
-
-            <ArticleModal
-                article={selectedArticle}
-                isOpen={selectedArticle !== null}
-                onClose={() => setSelectedArticle(null)}
             />
         </>
     );

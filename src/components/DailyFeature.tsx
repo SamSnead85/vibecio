@@ -1,12 +1,8 @@
+import { Link } from 'react-router-dom';
 import { Calendar, ArrowRight, Clock, Layers } from 'lucide-react';
 import { getTodaysFeaturedArticle } from '../data/content';
-import type { Article } from '../types';
 
-interface DailyFeatureProps {
-    onReadArticle: (article: Article) => void;
-}
-
-export default function DailyFeature({ onReadArticle }: DailyFeatureProps) {
+export default function DailyFeature() {
     const featuredArticle = getTodaysFeaturedArticle();
     const today = new Date().toLocaleDateString('en-US', {
         weekday: 'long',
@@ -34,9 +30,9 @@ export default function DailyFeature({ onReadArticle }: DailyFeatureProps) {
                 </div>
 
                 {/* Featured Article Card with Image */}
-                <div
-                    className="glass-card rounded-xl overflow-hidden cursor-pointer card-hover group animate-fade-in-up"
-                    onClick={() => onReadArticle(featuredArticle)}
+                <Link
+                    to={`/article/${featuredArticle.id}`}
+                    className="block glass-card rounded-xl overflow-hidden cursor-pointer card-hover group animate-fade-in-up"
                 >
                     <div className="grid lg:grid-cols-5 gap-0">
                         {/* Large Image Section */}
@@ -116,7 +112,7 @@ export default function DailyFeature({ onReadArticle }: DailyFeatureProps) {
                             </div>
                         </div>
                     </div>
-                </div>
+                </Link>
             </div>
         </section>
     );
