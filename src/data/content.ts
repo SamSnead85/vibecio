@@ -107,11 +107,11 @@ export const leaders: Leader[] = [
         expertise: ["Customer Experience AI", "Personalization at Scale", "Retail Technology", "Agentic Customer Service"]
     },
     {
-        id: "sam-sweilem",
-        name: "Sam Sweilem",
-        title: "CIO",
-        company: "HealthPlan Services",
-        bio: "Sam Sweilem is the Chief Information Officer at HealthPlan Services, where he leads technology strategy and AI transformation initiatives for one of the nation's leading healthcare administration companies. With over 15 years of experience driving digital and AI initiatives across Fortune 500 companies, Sam has developed a reputation for pragmatic, foundation-first approaches to enterprise AI. His methodology emphasizes that successful AI implementations require robust infrastructure, clear governance, and cultural readiness before technology deployment. Under Sam's leadership, HealthPlan Services has achieved industry-leading automation rates while maintaining HIPAA compliance and data security standards. He is a frequent speaker on AI readiness at healthcare technology conferences and serves on advisory boards for multiple healthcare AI startups.",
+        id: "vibecio-editorial",
+        name: "VibeCIO Editorial",
+        title: "Editor-in-Chief",
+        company: "VibeCIO",
+        bio: "The VibeCIO Editorial team leads technology strategy analysis and AI transformation coverage for one of the leading digital publications serving CIOs and enterprise technology leaders. With over 15 years of collective experience covering digital and AI initiatives across Fortune 500 companies, the team has developed a reputation for pragmatic, foundation-first approaches to enterprise AI analysis. Their methodology emphasizes that successful AI implementations require robust infrastructure, clear governance, and cultural readiness before technology deployment.",
         expertise: ["Healthcare IT", "AI Transformation", "HIPAA Compliance", "Enterprise Architecture", "Change Management"]
     },
     {
@@ -550,7 +550,7 @@ export const articles: Article[] = [
         title: "Why AI Transformations Fail Before They Start",
         subtitle: "Building the Foundations That Enable AI Success",
         category: "strategy",
-        author: "Sam Sweilem, CIO at HealthPlan Services",
+        author: "VibeCIO Editorial Team",
         date: "2025-12-26",
         readTime: 10,
         featured: true,

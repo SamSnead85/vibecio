@@ -28,7 +28,7 @@ The Enterprise AI-Native Imperative: Why 95% of AI Pilots Fail
 ### AI Transformation Foundations
 Why AI Transformations Fail Before They Start
 - URL: /article/ai-transformation-foundations
-- Author: Sam Sweilem, CIO at HealthPlan Services
+- Author: VibeCIO Editorial Team
 - Summary: Foundation First methodology explaining why 70% of AI initiatives fail and how to build the infrastructure, governance, and cultural readiness required for AI success.
 
 ### Financial Services Transformation
@@ -54,11 +54,11 @@ Why AI Transformations Fail Before They Start
 
 ## Key Authors
 
-### Sam Sweilem
-- Title: Chief Information Officer
-- Organization: HealthPlan Services
+### VibeCIO Editorial Team
+- Title: Editor-in-Chief
+- Organization: VibeCIO
 - Expertise: AI Transformation, Enterprise AI, Healthcare IT, HIPAA Compliance, Change Management
-- Profile: /leader/sam-sweilem
+- Profile: /leader/vibecio-editorial
 
 ## Contact
 - Editorial: /contact
@@ -71,7 +71,7 @@ AI-Native training, NATIVE Framework, ScaledNative, enterprise AI training, AI w
 ## Structured Data Available
 - Organization Schema (NewsMediaOrganization)
 - Article Schema (multiple articles)
-- Person Schema (Sam Sweilem, industry leaders)
+- Organization Schema (VibeCIO Editorial Team, industry leaders)
 - FAQPage Schema (AI transformation questions)
 - HowTo Schema (AI implementation guide)
 - ItemList Schema (article collection)

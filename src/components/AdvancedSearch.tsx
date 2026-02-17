@@ -23,7 +23,7 @@ interface TrendingTopic {
 const mockResults: SearchResult[] = [
     { id: 'fear-to-superpower', title: 'From Fear to Superpower: Building AI-Native Teams', category: 'Leadership', excerpt: 'How leaders can guide their organizations through AI transformation...', date: '2026-01-23', readTime: 12, type: 'article' },
     { id: 'ai-native-enterprise', title: 'The Enterprise AI-Native Imperative', category: 'Strategy', excerpt: '95% of AI pilots fail—not because of technology, but because of missing foundational capabilities...', date: '2025-12-29', readTime: 12, type: 'article' },
-    { id: 'sam-sweilem', title: 'Sam Sweilem - CIO at HealthPlan Services', category: 'Leader', excerpt: 'Leading technology strategy and AI transformation initiatives...', date: '', readTime: 0, type: 'leader' },
+    { id: 'vibecio-editorial', title: 'VibeCIO Editorial - Editor-in-Chief', category: 'Leader', excerpt: 'Leading technology strategy analysis and AI transformation coverage...', date: '', readTime: 0, type: 'leader' },
     { id: 'ai-cio-podcast', title: 'AI Strategy for Modern CIOs', category: 'Podcast', excerpt: 'Episode 8: Navigating AI governance and compliance...', date: '2026-01-15', readTime: 45, type: 'podcast' }
 ];
 

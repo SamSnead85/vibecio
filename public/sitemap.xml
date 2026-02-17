@@ -50,7 +50,7 @@
     </news:news>
   </url>
   
-  <!-- Featured Article: Sam Sweilem on AI Transformation -->
+  <!-- Featured Article: AI Transformation Foundations -->
   <url>
     <loc>https://vibecio.netlify.app/article/ai-transformation-foundations</loc>
     <lastmod>2025-12-26</lastmod>
@@ -62,8 +62,8 @@
         <news:language>en</news:language>
       </news:publication>
       <news:publication_date>2025-12-26</news:publication_date>
-      <news:title>Why AI Transformations Fail Before They Start - Sam Sweilem</news:title>
-      <news:keywords>Sam Sweilem, AI transformation, enterprise AI, CIO, HealthPlan Services, AI strategy, AI governance, foundation first methodology</news:keywords>
+      <news:title>Why AI Transformations Fail Before They Start</news:title>
+      <news:keywords>AI transformation, enterprise AI, CIO, AI strategy, AI governance, foundation first methodology</news:keywords>
     </news:news>
   </url>
   
@@ -111,9 +111,9 @@
     <priority>0.8</priority>
   </url>
   
-  <!-- Sam Sweilem Profile -->
+  <!-- VibeCIO Editorial Profile -->
   <url>
-    <loc>https://vibecio.netlify.app/leader/sam-sweilem</loc>
+    <loc>https://vibecio.netlify.app/leader/vibecio-editorial</loc>
     <lastmod>2025-12-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
